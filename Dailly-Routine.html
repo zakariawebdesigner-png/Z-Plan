@@ -1,0 +1,827 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    
+    
+    <link href="Tasks-space-style.css" rel="stylesheet" >
+       <link href="Dailly.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+<link rel="shortcut icon" href="photos/pic15.png"  type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   <title>PlanZ</title>
+</head>
+<body >
+
+
+                       <div  id="head-part" class="head-part">
+               <div class="Logo-text">
+                          <div class="logo"></div>
+                        <h1 class="my-todo-text" >My To Do list </h1>
+
+               </div>
+           
+              <a class="link" href="index.html">Home</a>
+
+                  <a class="link" href="tasks-page.html">Tasks space</a>
+
+                        <a class="link" href="">Developer</a>
+
+                           <a class="link" id="delete-all" href="#">Delete tasks</a>
+
+                      <a class="link" href="Dailly-Routine.html">Dailly</a>
+               <div class="profil-bell">
+                    <div class="toolTipOf-gearDiv">
+                         <div class="gear" id="gearBtn"></div>
+                      <div id="toolTipGear" class="toolTipGear">oppen Settings Bar</div>
+
+                    </div>
+                     
+                  <i class="fa-solid fa-bell" ></i>
+      
+                 <div class="toolTip-div">
+                    <div class="Profile-div">
+                          <div id="profile" class="profile"></div>
+
+                    </div>
+                      <div id="toolTip" class="toolTip">oppen user navigation menue</div>
+                 </div>
+              </div>
+
+         </div>
+
+      
+<div id="RoutineForm" class="RoutineForm">
+              <div class="Tittle-and-deleteBtn">
+                    <div class="RoutinesLogo-container">
+                           <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="RoutineForm-text">
+                        <p class="RoutineForm-title">Create Routine</p>
+                        <p class="RoutineForm-discription">Add a  new routine  to your sheduale</p>
+                    </div>
+                    <div class="RoutineDeleteButton" ><button id="RoutineDeleteButton">X</button></div>
+              </div>
+              <div class="RootineDetails">
+
+                  <div class="leftSIdeOf-line">
+                            <div class="RoutinesTittle">
+                                <div class="Labele-and-Pic">
+                                    <div class="File"></div>
+                                        <label class="RoutineNameLabell" for="RoutinesName-input">Routine Name</label>
+    
+                                </div>
+                                <input type="text" id="RoutinesName-input"  placeholder="Ennter Routines Name..." minlength="3" maxlength="15"   required>
+                            </div>
+                            <div class="RoutinesCategory">
+                                           <div class="Labele-and-i">
+                                  <i class="bi bi-tag"></i>
+                                        <label class="RoutineNameLabell"  id="RoutineNameLabell" for="RoutinesCategory-input">Routine Category</label>
+    
+                                </div>
+                                 <input type="text" id="RoutinesCategory-input"  placeholder="Select  Category" minlength="3" maxlength="15" readonly   required>
+                                 <i id="arrowCategory" class="fa-solid fa-chevron-up"></i>
+                                   <div id="Categories" class="Categories">
+                                    <div id="Pray" class="Pray">
+                                        
+                                        <i id="Mosk" class="fa-solid fa-mosque"></i>
+                                        <p>Pray</p>
+                                    </div>
+                                    <div  id="Study" class="Study">
+                                        <i id="studySticker" class="fa-solid fa-book-open"></i>
+                                      <p>Study</p>  
+                                    </div>
+                                    <div   id="Work-Category" class="Work-Category">
+                                        <i id="worksticker" class="fa-solid fa-briefcase"></i>
+                                       <p>Work</p> 
+                                    </div>
+                                   
+                                    <div id="Health" class="Health">
+                                       <i id="healthsticker" class="fa-regular fa-heart"></i>
+                                      <p>Health</p>  
+                                    </div>
+                                    <div id="Sport" class="Sport">
+                                        <i id="sportsticker" class="fa-solid fa-dumbbell"></i>
+
+                                       <p>Sport</p> 
+                                    </div>
+                                    
+                                     <div  id="Personal-Category" class="Personal-Category">
+                                       <i id="personalsticker" class="fa-regular fa-user"></i>
+                                     <p>Personal</p>  
+                                    </div>
+
+                                           <div id="Others" class="Others">
+                                        <i id="othersticker" class="fa-regular fa-bell"></i>
+                                     <p>Others</p>  
+                                    </div>
+
+                                   </div>
+                                </div>
+                  </div>
+
+
+
+
+
+                <div class="RoutineDetailsLine"></div>
+                <div class="RightSIdeOf-line">
+                    <div class="ColorTitle">
+                        <i class="fa-solid fa-palette"></i>
+                        <p>Choose a Color for the Task</p>
+                    </div>
+                    <div class="ColorsContainer">
+                        <div class="ColorHolder">
+                            <div class="Green"></div>
+                        </div>
+                        <div class="ColorHolder">
+                            <div class="Blue"></div>
+                        </div>
+                        <div class="ColorHolder">
+                            <div class="Yellow"></div>
+                        </div>
+                        <div class="ColorHolder">
+                            <div class="Orange"></div>
+                        </div>
+                        <div class="ColorHolder">
+                            <div class="Pink"></div>
+                        </div>
+                        <div class="ColorHolder">
+                            <div class="DarkBlue"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="RepeatDaysContainer">
+                        <div class="RepeatTittle">
+                              <i class="fa-solid fa-calendar-check"></i>
+                        <p  class="RepeatText1" >Repeat on</p>
+                        </div>
+                      
+                        <div class="RepeatDaysDiv">
+                            <div class="Mon">Mon</div>
+                            <div class="Tue">Tue</div>
+                            <div class="Wed">Wed</div>
+                            <div class="Thu">Thu</div>
+                            <div class="Fri">Fri</div>
+                            <div class="Sat">Sat</div>
+                            <div class="Sun">Sun</div>
+                        </div>
+                        <p class="RepeatText2">Select Days For This Routine To be On</p>
+                    </div>
+                </div>
+                
+              </div>
+              <div class="HorizontalLine"></div>
+              <div class="RoutineDuration">
+
+                    <div class="DeadLineSelectDiv" id="DeadLineSelectDiv">
+                        <div class="HoursSide"  id="HoursSide2">
+                                 <div class="EndingHourDiv">00</div>
+                              <div class="EndingHourDiv">01</div>
+                              <div class="EndingHourDiv">02</div>
+                              <div class="EndingHourDiv">03</div>
+                              <div class="EndingHourDiv">04</div>
+                              <div class="EndingHourDiv">05</div>
+                              <div class="EndingHourDiv">06</div>
+                              <div class="EndingHourDiv">07</div>
+                              <div class="EndingHourDiv">08</div>
+                              <div class="EndingHourDiv">09</div>
+                              <div class="EndingHourDiv">10</div>
+                              <div class="EndingHourDiv">11</div>
+                              <div class="EndingHourDiv">12</div>
+                              <div class="EndingHourDiv">13</div>
+                              <div class="EndingHourDiv">14</div>
+                              <div class="EndingHourDiv">15</div>
+                              <div class="EndingHourDiv">16</div>
+                              <div class="EndingHourDiv">17</div>
+                              <div class="EndingHourDiv">18</div>
+                              <div class="EndingHourDiv">19</div>
+                              <div class="EndingHourDiv">20</div>
+                              <div class="EndingHourDiv">21</div>
+                              <div class="EndingHourDiv">22</div>
+                              <div class="EndingHourDiv">23</div>
+                        </div>
+                        <div class="MinutesSide"  id="MinutesSide2">
+                                 <div class="EndingMinuteDiv">00</div>
+                              <div class="EndingMinuteDiv">01</div>
+                              <div class="EndingMinuteDiv">02</div>
+                              <div class="EndingMinuteDiv">03</div>
+                              <div class="EndingMinuteDiv">04</div>
+                              <div class="EndingMinuteDiv">05</div>
+                              <div class="EndingMinuteDiv">06</div>
+                              <div class="EndingMinuteDiv">07</div>
+                              <div class="EndingMinuteDiv">08</div>
+                              <div class="EndingMinuteDiv">09</div>
+                              <div class="EndingMinuteDiv">10</div>
+                              <div class="EndingMinuteDiv">11</div>
+                              <div class="EndingMinuteDiv">12</div>
+                              <div class="EndingMinuteDiv">13</div>
+                              <div class="EndingMinuteDiv">14</div>
+                              <div class="EndingMinuteDiv">15</div>
+                              <div class="EndingMinuteDiv">16</div>
+                              <div class="EndingMinuteDiv">17</div>
+                              <div class="EndingMinuteDiv">18</div>
+                              <div class="EndingMinuteDiv">19</div>
+                              <div class="EndingMinuteDiv">20</div>
+                              <div class="EndingMinuteDiv">21</div>
+                              <div class="EndingMinuteDiv">22</div>
+                              <div class="EndingMinuteDiv">23</div>
+                              <div class="EndingMinuteDiv">24</div>
+                              <div class="EndingMinuteDiv">25</div>
+                              <div class="EndingMinuteDiv">26</div>
+                              <div class="EndingMinuteDiv">27</div>
+                              <div class="EndingMinuteDiv">28</div>
+                              <div class="EndingMinuteDiv">29</div>
+                              <div class="EndingMinuteDiv">30</div>
+                              <div class="EndingMinuteDiv">31</div>
+                              <div class="EndingMinuteDiv">32</div>
+                              <div class="EndingMinuteDiv">33</div>
+                              <div class="EndingMinuteDiv">34</div>
+                              <div class="EndingMinuteDiv">35</div>
+                              <div class="EndingMinuteDiv">36</div>
+                              <div class="EndingMinuteDiv">37</div>
+                              <div class="EndingMinuteDiv">38</div>
+                              <div class="EndingMinuteDiv">39</div>
+                              <div class="EndingMinuteDiv">40</div>
+                              <div class="EndingMinuteDiv">41</div>
+                              <div class="EndingMinuteDiv">42</div>
+                              <div class="EndingMinuteDiv">43</div>
+                              <div class="EndingMinuteDiv">44</div>
+                              <div class="EndingMinuteDiv">45</div>
+                              <div class="EndingMinuteDiv">46</div>
+                              <div class="EndingMinuteDiv">47</div>
+                              <div class="EndingMinuteDiv">48</div>
+                              <div class="EndingMinuteDiv">49</div>
+                              <div class="EndingMinuteDiv">50</div>
+                              <div class="EndingMinuteDiv">51</div>
+                              <div class="EndingMinuteDiv">52</div>
+                              <div class="EndingMinuteDiv">53</div>
+                              <div class="EndingMinuteDiv">54</div>
+                              <div class="EndingMinuteDiv">55</div>
+                              <div class="EndingMinuteDiv">56</div>
+                              <div class="EndingMinuteDiv">57</div>
+                              <div class="EndingMinuteDiv">58</div>
+                              <div class="EndingMinuteDiv">59</div>
+                        </div>
+                    </div>
+
+                       <div class="StartLineSelectDiv" id="StartLineSelectDiv">
+                        <div class="HoursSide2" id="HoursSide">
+                              <div class="StartingHourDiv">00</div>
+                              <div class="StartingHourDiv">01</div>
+                              <div class="StartingHourDiv">02</div>
+                              <div class="StartingHourDiv">03</div>
+                              <div class="StartingHourDiv">04</div>
+                              <div class="StartingHourDiv">05</div>
+                              <div class="StartingHourDiv">06</div>
+                              <div class="StartingHourDiv">07</div>
+                              <div class="StartingHourDiv">08</div>
+                              <div class="StartingHourDiv">09</div>
+                              <div class="StartingHourDiv">10</div>
+                              <div class="StartingHourDiv">11</div>
+                              <div class="StartingHourDiv">12</div>
+                              <div class="StartingHourDiv">13</div>
+                              <div class="StartingHourDiv">14</div>
+                              <div class="StartingHourDiv">15</div>
+                              <div class="StartingHourDiv">16</div>
+                              <div class="StartingHourDiv">17</div>
+                              <div class="StartingHourDiv">18</div>
+                              <div class="StartingHourDiv">19</div>
+                              <div class="StartingHourDiv">20</div>
+                              <div class="StartingHourDiv">21</div>
+                              <div class="StartingHourDiv">22</div>
+                              <div class="StartingHourDiv">23</div>
+                        </div>
+                        <div class="MinutesSide2"  id="MinutesSide">
+                                                          <div class="StartingMinuteDiv">00</div>
+                              <div class="StartingMinuteDiv">01</div>
+                              <div class="StartingMinuteDiv">02</div>
+                              <div class="StartingMinuteDiv">03</div>
+                              <div class="StartingMinuteDiv">04</div>
+                              <div class="StartingMinuteDiv">05</div>
+                              <div class="StartingMinuteDiv">06</div>
+                              <div class="StartingMinuteDiv">07</div>
+                              <div class="StartingMinuteDiv">08</div>
+                              <div class="StartingMinuteDiv">09</div>
+                              <div class="StartingMinuteDiv">10</div>
+                              <div class="StartingMinuteDiv">11</div>
+                              <div class="StartingMinuteDiv">12</div>
+                              <div class="StartingMinuteDiv">13</div>
+                              <div class="StartingMinuteDiv">14</div>
+                              <div class="StartingMinuteDiv">15</div>
+                              <div class="StartingMinuteDiv">16</div>
+                              <div class="StartingMinuteDiv">17</div>
+                              <div class="StartingMinuteDiv">18</div>
+                              <div class="StartingMinuteDiv">19</div>
+                              <div class="StartingMinuteDiv">20</div>
+                              <div class="StartingMinuteDiv">21</div>
+                              <div class="StartingMinuteDiv">22</div>
+                              <div class="StartingMinuteDiv">23</div>
+                              <div class="StartingMinuteDiv">24</div>
+                              <div class="StartingMinuteDiv">25</div>
+                              <div class="StartingMinuteDiv">26</div>
+                              <div class="StartingMinuteDiv">27</div>
+                              <div class="StartingMinuteDiv">28</div>
+                              <div class="StartingMinuteDiv">29</div>
+                              <div class="StartingMinuteDiv">30</div>
+                              <div class="StartingMinuteDiv">31</div>
+                              <div class="StartingMinuteDiv">32</div>
+                              <div class="StartingMinuteDiv">33</div>
+                              <div class="StartingMinuteDiv">34</div>
+                              <div class="StartingMinuteDiv">35</div>
+                              <div class="StartingMinuteDiv">36</div>
+                              <div class="StartingMinuteDiv">37</div>
+                              <div class="StartingMinuteDiv">38</div>
+                              <div class="StartingMinuteDiv">39</div>
+                              <div class="StartingMinuteDiv">40</div>
+                              <div class="StartingMinuteDiv">41</div>
+                              <div class="StartingMinuteDiv">42</div>
+                              <div class="StartingMinuteDiv">43</div>
+                              <div class="StartingMinuteDiv">44</div>
+                              <div class="StartingMinuteDiv">45</div>
+                              <div class="StartingMinuteDiv">46</div>
+                              <div class="StartingMinuteDiv">47</div>
+                              <div class="StartingMinuteDiv">48</div>
+                              <div class="StartingMinuteDiv">49</div>
+                              <div class="StartingMinuteDiv">50</div>
+                              <div class="StartingMinuteDiv">51</div>
+                              <div class="StartingMinuteDiv">52</div>
+                              <div class="StartingMinuteDiv">53</div>
+                              <div class="StartingMinuteDiv">54</div>
+                              <div class="StartingMinuteDiv">55</div>
+                              <div class="StartingMinuteDiv">56</div>
+                              <div class="StartingMinuteDiv">57</div>
+                              <div class="StartingMinuteDiv">58</div>
+                              <div class="StartingMinuteDiv">59</div>
+                        </div>
+                    </div>
+                    
+
+                <div class="StartTimeDiv">
+                    <p>Start Time</p>
+                    <div class="RoutineTime" id="RoutineTime">
+                        <div class="HoursMinutes">
+                                 <input  type="number" id="Hours" class="Hours"   readonly  required >
+                              <div class="ColumnDOts">:</div>
+                               <input type="number"   id="Minutes" class="Minutes"  readonly  required>
+                        </div>
+                        
+                        <i class="fa-solid fa-clock"></i>
+                    </div> 
+                </div>
+                
+                <div class="EndTimeDiv">
+                         <p>End Time</p>
+                    <div class="RoutineTime" id="RoutineTime2">
+                        <div class="HoursMinutes">
+                                 <input class="Hours" type="number"   id="EndHours" class="Hours"  readonly  required>
+                              <div class="ColumnDOts">:</div>
+                               <input class="Minutes"  type="number"   id="EndMinutes" class="Minutes" readonly  required>
+                        </div>
+                        
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                </div>
+            
+                <div class="Duration">
+                    <div class="ClockDiv">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="DurationTime">
+                        <p>Duration</p>
+                        <div  class="Duration-hours-minHolder">
+                            <div id="Duration-hours"  ></div>
+                             <div  id="Duration-minutes" ></div>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+              <div class="DurationSeparationLines"></div>
+              <div class="MoreDetails">
+                
+                    <div class="RoutineNoteTexts">
+                        <h2>Write a Note</h2>
+                        <p>You can follow your routine with a note to include The details(Or explanations) you want </p>
+                    </div>
+                    <div class="RoutineNoteDiv">
+                        <p>Note:</p>
+                        <textarea class="RoutineNote" ></textarea>
+                    </div>
+                
+              </div>
+              <div class="RoutineButtons-div">
+                <button id="CancelRoutine"  class="CancelRoutine">Cancel</button>
+                <button  id="CreateRoutine" class="CreateRoutine">Create Routine</button>
+              </div>
+        </div>
+
+   
+<main>
+
+
+                    <!--This  is the div responsible of  blurring the whole site -->
+<div id="overlay" class="overlay"></div>
+
+
+ 
+<div class="DaillyMissionsContainer" id="DaillyMissionsContainer">
+          
+            
+            <div class="headerOf-Dailly">
+                <div class="RoutinePage-title">
+
+                    <p class="titleOf-routine" >Z-Routine</p>
+                    <p class="routine-motivate-text">Organize your routine,live live like a Z-guy , achieve your goals</p>
+                </div>
+
+                <div class="headerClicks">
+                    <div id="AddRoutine-btn" class="AddRoutine-btn">
+                         <div class="plus">+</div>
+
+                           <p class="addRoutineText" >Add Routine</p>
+                    </div>
+
+                   
+                </div>
+            </div>
+               <div class="the-holder-of-leftRightMiddle">
+                      
+
+                      
+
+
+
+                            <div class="MiddleSide">
+                                
+                             <div class="Routine-tasks-holder">
+                                     <div class="timeColumns-Container">
+                                        <div class="empty"></div>
+                                                <div>1:00</div>
+                                                      <div>2:00</div>
+                                                     <div>3:00</div>
+                                                      <div>4:00</div>
+                                                   <div>5:00</div>
+                                                      <div>6:00</div>
+                                                         <div>7:00</div>
+                                                             <div>8:00</div>
+                                                     <div>9:00</div>
+                                                   <div>10:00</div>
+                                                               <div>11:00</div>
+                                                  <div>12:00</div>
+                                                  <div>13:00</div>
+                                                <div>14:00</div>
+                                                <div>15:00</div>
+                                           <div>16:00</div>
+                                         <div>17:00</div>
+                                       <div>18:00</div>
+                                              <div>19:00</div>
+                                        <div>20:00</div>
+                                              <div>21:00</div>
+                                             <div>22:00</div>
+                                     <div>23:00</div>
+                                           <div>00:00</div>
+                                        
+                                     </div>
+
+                                     <div class="Routine-and-days">
+                                                    <div class="RoutinesGrid">
+                                        <div class="Monday">Monday</div>
+                                           <div class="Tuesday">Tuesday</div>
+                                           <div class="Wednesday">Wednesday</div>
+                                                  <div class="Thursday">Thursday</div>
+                                                <div class="Friday">Friday</div>
+                                              <div class="Saturday">Saturday</div>
+                                                <div class="Sunday">Sunday</div>
+                 
+                                                    
+                                       </div>
+                                       <div class="ColumnsOfRoutines">
+
+                                                
+                           <div class="RoutineOptions" id="RoutineOptions">
+                            <button class="DeleteOption" id="DeleteOption" >x</button>
+
+                                     <button class="DeleteRoutine" id="DeleteRoutine" >
+                                        <i class="fa-solid fa-trash" ></i>
+                                     </button>
+
+                                     <button class="ModifyRoutine" id="ModifyRoutine">
+                                        <i class="fa-solid fa-pen" ></i>
+                                     </button>
+
+                                     <button class="DoneRoutine" id="DoneRoutine">
+                                        <i class="fa-solid fa-check" ></i>
+                                     </button>
+                           </div>
+
+                                                  <div id="RoutineColumn-Monday" class="RoutineColumn-Monday">
+                                                     
+                                                    <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Tuesday"  class="RoutineColumn-Monday">
+                                             <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Wednesday"   class="RoutineColumn-Monday">
+                                            
+                              <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Thursday"  class="RoutineColumn-Monday">
+                                                 <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Friday"    class="RoutineColumn-Monday">
+                                                <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Saturday"   class="RoutineColumn-Monday">
+                                            <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                         <div id="RoutineColumn-Sunday"   class="RoutineColumn-Monday">
+                                                 <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                                        <div class="daySeparationLine"></div>
+                                       </div>
+                                    </div>
+                                       
+                                     </div>
+                                     
+                                     
+                                       
+                             </div>
+                                  
+                               </div>
+
+                      <div class="RightSide">
+                        <div class="Overview"></div>
+
+                        <div class="Routine-Category-Stat">
+                              <div class="RoutineCategory-Title">
+                               <p class="CategiryContainerText">Routine Categories</p>
+                              </div>
+
+                               <div class="CategoryDiv">
+                                 <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryPray">Pray</div>
+                                         
+                                 </div>
+                                    <div class="NumCategoryPray">42</div>
+                                      
+                               </div>
+
+                               <div class="CategoryDiv">
+
+                               <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryHealth">Health</div>
+                                         
+                                 </div>
+                                    <div class="NumCategoryHealth">34</div>
+
+                               </div>
+
+                               <div class="CategoryDiv">
+
+                                     <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategorySports">Sports</div>
+                                         
+                                 </div>
+                                    <div class="NumCategorySports">12</div>
+
+                               </div>
+
+                               <div class="CategoryDiv">
+
+                                     <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryStudy">Study</div>
+                                         
+                                 </div>
+                                    <div class="NumCategoryStudy">5</div>
+
+                               </div>
+
+
+                               <div class="CategoryDiv">
+                                     <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryPersonal">Personal</div>
+                                         
+                                 </div>
+                                    <div class="NNumCategoryPersonal">2</div>
+
+                               </div>
+
+
+                                <div class="CategoryDiv">
+                                     <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryWork">work</div>
+                                         
+                                 </div>
+                                    <div class="NumCategoryWork">2</div>
+
+                               </div>
+
+
+                                <div class="CategoryDiv">
+                                     <div class="HolderOf-Dot-andCategory">
+                                    <div class="DotCategory"></div>
+                                    <div class="CategoryOthers">Others</div>
+                                         
+                                 </div>
+                                    <div class="NumCategoryOthers">20</div>
+
+                               </div>
+
+
+
+
+                        </div>
+
+                        <div class="StatisticsOfDailly"></div>
+                      </div>
+               </div>
+
+
+</main>
+
+
+
+<script  src="Dailly.js" ></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

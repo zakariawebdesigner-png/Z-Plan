@@ -1,0 +1,659 @@
+html{
+    font-size: 20px;
+    scroll-behavior:smooth;
+ 
+}
+
+body{
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+margin: 0;
+    width: 100%;
+    gap: 1rem;
+    min-height:100vh ;
+    overflow-x: hidden;
+    background-color: rgb(98, 162, 222);
+    font-family: 'Poppins',sans-serif;
+
+}
+  
+
+header{
+
+display: flex;
+width:100% ;
+height: 4rem;
+align-self: center;
+margin-top: 0;
+align-items: center;
+justify-content: space-between;
+}
+
+
+
+
+.LogoNameDiv{
+    display: flex;
+    width: clamp(4rem,30vw,15rem);
+    height:100% ;
+}
+
+
+
+
+
+.Logo{
+    background-image: url(photos/pic15.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:40%;
+    height: 100%;
+}
+
+
+
+.Name{
+    display: flex;
+  flex: 1;
+
+    align-items: center;
+  
+}
+
+.Name b{
+    font-size: 2rem;
+    color: #fff;
+
+}
+
+
+
+.NavigationBar{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+.NavigationBar a{
+    position: relative;
+    background-color: transparent;
+
+font-size: 1rem;
+padding-left: 1rem;
+padding-top:0.6rem ;
+padding-bottom:0.6rem ;
+text-decoration: none;
+padding-right: 1rem;
+color: #fff;
+transition: 0.6s ease;
+
+}
+
+
+
+.NavigationBar a:hover{
+
+background-color: transparent;
+border-radius: 1rem;
+
+   background: linear-gradient(
+    135deg,
+    rgba(0, 150, 255, 0.45),
+    rgba(0, 70, 200, 0.35)
+  );
+
+
+
+
+
+  /* strong glossy edge */
+
+  /* outer glow + inner shine */
+  box-shadow:
+    0 10px 40px rgba(0, 140, 255, 0.6),
+    inset 0 2px 6px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.BtnsOf-Registers{
+    display: flex;
+    width: clamp(4rem,30vw,16rem);
+    height:3rem ;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+
+.BtnsOf-Registers button{
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+border-radius: 0.4rem;
+padding-bottom:0.4rem ;
+padding-top:0.3rem ;
+padding-left: 0.8rem;
+padding-right:0.8rem ;
+
+cursor: pointer;
+}
+
+
+.Log-in{
+    position: relative;
+    background-color: transparent;
+color: #2b51ea;
+border: 1px solid #5342ef;
+}
+
+.Header-Get-Started{
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        #B8C94A,
+        #D0D658,
+        #E0E57A
+    );
+    color: #121A3D;
+    border: 1px solid #f6f271;
+}
+
+
+.lock{
+top: 3%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    font-size: xx-large;
+    
+}
+
+.Header-Get-Started:hover .lock{
+font-size: 2rem;
+}
+
+.Log-in:hover .lock{
+font-size: 2rem;
+}
+
+
+
+
+
+
+.cta-container{
+
+display: flex;
+flex-direction: row;
+align-self: center;
+width:95%;
+height: 37rem;
+border-radius: 1.5rem;
+background: linear-gradient(
+    135deg,
+    #050816,
+    #0B1026,
+    #121A3D
+);
+
+}
+
+
+
+
+.left-side{
+
+display: flex;
+flex-direction:column;
+width: 50%;
+height: 100%;
+align-items: center;
+
+gap: 1rem;
+
+border-top-left-radius: 1.5rem;
+}
+
+.right-side{
+
+display: flex;
+flex-direction:column;
+width: 50%;
+height: 100%;
+justify-content: center;
+border-top-right-radius: 1.5rem;
+
+}
+
+
+
+.p1-and-p2-container-parent{
+
+display: flex;
+flex-direction:column;
+gap: 1.5rem;
+width: 32rem;
+height: fit-content;
+padding-left:1rem;
+margin-bottom: 0;
+margin-top: 3rem;
+
+}
+
+
+.p1{
+color: white;
+font-size: 0.9rem;
+margin-bottom: 0;
+border-radius:0.28rem;
+width: fit-content;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+padding-top: 0.3rem;
+padding-bottom: 0.3rem;
+
+background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.432),
+        rgba(76,96,184,0.45),
+        rgba(49, 64, 131, 0.7)
+
+);
+  box-shadow:
+        0 0 18px rgba(76,96,184,0.2),
+        inset 0 0 10px rgba(255,255,255,0.04);
+
+        transform:translateX(-70vw);
+        animation:move-p1 0.7s ease forwards ;
+   animation-delay:0.1s ;
+}
+
+@keyframes move-p1{
+
+from{
+        transform:translateX(-70vw);
+
+}
+to{
+
+            transform:translateX(0);
+
+}
+
+
+
+}
+
+
+
+
+.p2-container{
+display: flex;
+width: 32rem;
+height:11rem;
+
+padding: 0;
+
+}
+
+.p2{
+color: white;
+font-size: 4.3rem;
+font-weight: 700;
+margin-top: 0;
+color: #6d8dff;
+transform:translateX(-70vw);
+animation: move-p2 0.7s ease forwards ;
+   animation-delay:0.3s ;
+
+
+}
+
+
+
+@keyframes move-p2{
+
+from{
+        transform:translateX(-70vw);
+
+}
+to{
+
+            transform:translateX(0);
+
+}
+
+
+}
+
+
+.p3-div{
+
+display: flex;
+width: 27rem;
+height: fit-content;
+margin-top: 0;
+
+}
+
+
+
+
+.p3{
+    margin-top: 0;
+color: white;
+transform:translateX(-70vw);
+ animation:move-p3 0.7s ease forwards;
+   animation-delay:0.4s ;
+
+}
+
+@keyframes move-p3{
+
+from{
+        transform:translateX(-70vw);
+
+}
+to{
+
+            transform:translateX(0);
+
+}
+
+
+}
+
+.Get-Started{
+
+width: fit-content;
+height: fit-content;
+padding-bottom:0.3rem ;
+padding-top:0.3rem ;
+padding-right:1.8rem ;
+padding-left: 1.8rem;
+font-size: larger;
+font-weight: 600;
+border-radius: 0.7rem;
+margin-top: 1rem;
+cursor: pointer;
+text-decoration: none;
+opacity: 0;
+background: linear-gradient(
+    135deg,
+    #6a8cff,
+    #4a6cff,
+    #3558e6
+);
+border: 1px  outset rgba(255, 255, 0, 0.543);
+
+transform:translateY(20vw);
+ animation:move-button 0.7s ease forwards;
+
+   animation-delay:0.5s ;
+
+}
+
+
+
+
+
+@keyframes move-button{
+
+from{
+    opacity: 0;
+        transform:translateY(20vw);
+
+}
+to{
+opacity: 1;
+            transform:translateX(0);
+
+}
+
+
+}
+
+
+.Get-Started:hover{
+
+
+background: linear-gradient(125deg,#d5db66,#d0d658,#575a1c,#232506);
+
+
+}
+
+
+.image{
+
+
+background-image: url(photos/background.png);
+background-size: cover;
+width: 90%;
+height: 90%;
+background-position: center;
+border-radius: 1rem;
+padding-top: 2rem;
+transform:translateX(70vw);
+animation:move-pic 0.7s ease forwards;
+
+
+   animation-delay:0.2s ;
+
+}
+
+@keyframes move-pic{
+
+from{
+        transform:translateX(70vw);
+
+}
+to{
+
+            transform:translateX(0);
+
+}
+
+
+}
+
+p{
+    user-select:none;
+}
+
+
+
+
+
+.Developer{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(photos/Developer-background.png);
+    background-size: cover;
+}
+
+
+
+.Developer-pic-container{
+
+display: flex;
+width: 30%;
+height:38rem ;
+
+padding-top: 1rem;
+}
+
+
+
+
+.Developer-textContainer{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 30rem;
+      padding-left: 1rem;
+      justify-content: center;
+}
+
+
+
+
+
+.Developer-text{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+    justify-content: center;
+}
+
+
+
+
+
+.NameAndLine{
+    display: flex;
+    height: fit-content;
+    max-width:13rem ;
+    gap: 1rem;
+
+}
+
+.aboutme{
+    color: yellow;
+}
+
+
+
+.NameAndLine div{
+    height: 2px;
+    width: 2rem;
+
+   align-self: center;
+background-color: yellow;
+}
+
+.NameAndLine p{
+margin-top: 0;
+margin-bottom: 0;
+color:  yellow;
+}
+
+
+
+
+.DeveloperName{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size:4rem ;
+    font-weight: 600;
+   color: #fff;
+}
+
+
+
+.Developer-discription{
+margin-top: 0;
+color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.Programing-Skills-Container{
+    display: flex;
+    width: 50rem;
+    height: 6rem;
+}
+
+
+.CodeLanguages{
+    display: flex;
+width: 30rem;
+height: 5rem;
+align-items: center;
+gap: 5%;
+}
+
+
+
+.Programing-Skills-Container h2{
+ color:yellow;
+}
+
+.Html{
+    background-image: url(photos/HtmlPic.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+    width: 30%;
+    height:90%;
+
+}
+
+
+
+.Css{
+    background-image: url(photos/cssPic.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+     width: 30%;
+    height:90%;
+    border-radius: 0.5rem;
+}
+
+
+
+
+.Js{
+    background-image: url(photos/jsPic.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+    width: 30%;
+       height:90%;
+
+}
+
+
+
+
+
+.Developer-pic{
+background-image: url(photos/Developer.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+    width: 100%;
+    height:100%;
+    border: 1px solid yellow;
+     border-radius: 0.5rem;
+
+}
+
+
+
+
+
+.Features{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}

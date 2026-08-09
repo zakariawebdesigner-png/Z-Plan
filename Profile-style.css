@@ -1,0 +1,1117 @@
+html{
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    gap: 5%;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: #030a32;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: clamp(3rem,20vh,6rem);
+    padding-bottom:1%;
+    padding-top: 1%;
+}
+
+.Logo-text{
+    display: flex;
+    width: 33%;
+    height:100%;
+    align-items: center;
+    gap:clamp(0.5rem,2vw,2rem);
+    padding-left: 1%;
+}
+
+.logo{
+    background-image: url(photos/pic2.png);
+    background-size: cover;
+    width: clamp(3rem,10vw,5rem);
+    height: clamp(3rem,10vw,5rem);
+}
+
+.Logotext{
+    width: fit-content;
+    height: fit-content;
+    font-size:clamp(1rem,3vw,2rem);
+}
+
+.Gear-Bell{
+    display: flex;
+    width:clamp(3rem,14vw,13rem);
+    height: fit-content;
+    align-items: center;
+    gap:clamp(0.3rem,1vw,1rem);
+}
+
+.fa-solid.fa-bell{
+    font-size: clamp(1rem,2.5vw,2rem);
+    cursor: pointer;
+    color: white;
+}
+.fa-solid.fa-bell:hover{
+    color: rgb(0, 0, 0);
+}
+
+.gear{
+    background-image: url(photos/gear2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(1rem,3vw,2rem);
+    height: clamp(1rem,3vw,2rem);
+    cursor: pointer;
+}
+
+.gear:hover{
+    color: white;
+    background-image: url(photos/gear.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Profile{
+    background-image: url(photos/profile.png);
+    background-size: cover;
+    width: clamp(1rem,6vw,6rem);
+    height: clamp(1rem,6vw,6rem);
+    cursor: pointer;
+background-color: rgba(125, 100, 202, 0.952); /* was solid #64c5ca — needs alpha to see through it */
+-webkit-backdrop-filter: blur(10px) saturate(180%);
+backdrop-filter: blur(10px) saturate(180%); /* keep filters matching */
+border: 1px solid rgba(255, 255, 255, 0.3); /* subtle edge highlight sells the "glass pane" look */    border-radius: 1rem;
+
+}
+
+.Profile-records-informationsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    min-height: clamp(20rem,90vh,55rem);
+    align-self: center;
+    border-radius: 1rem;
+    padding-top: 1%;
+    gap: clamp(2.5rem,calc(6rem - 6vw),5.3rem);
+    background-image: url(photos/spaceBackground2.png);
+    background-size: cover;
+    background-position: center;
+
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+
+    border: 1px solid rgba(130, 190, 255, 0.807);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,140,255,.18),
+        inset 0 1px 1px rgba(255,255,255,.18),
+        inset 0 -1px 2px rgba(0,0,0,.25);
+}
+
+.ProfilePic-text{
+    display: flex;
+    width: clamp(20rem,92vw,89rem);
+    align-items: center;
+    height:fit-content;
+    justify-content: space-around;
+}
+
+.ProfilePic{
+    background-image: url(photos/profile.png);
+    background-size: cover;
+    width: clamp(6rem,23vw,22rem);
+    height: clamp(6rem,23vw,22rem);
+    cursor: pointer;
+}
+
+
+
+.InformationsText-container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+    gap:3%;
+}
+
+.Salutate{
+    font-size: x-large;
+    font-weight: 500;
+}
+.name{
+    line-height: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 3%;
+}
+
+.motivation{
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.Member-email{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+}
+
+.MemberSince{
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 4%;
+}
+
+.Email{
+    display: flex;
+    gap:4%;
+}
+
+.Member-email i{
+    font-size: large;
+}
+
+.RecordsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 70%;
+    padding-top: 1%;
+}
+
+.LevelSticker{
+    background-image: url(photos/Level20.png);
+    background-size: cover;
+    background-position: center;
+    width: clamp(8rem,17vw,19rem);
+    height: clamp(8rem,17vw,19rem);
+    align-self: center;
+}
+
+.XPNum{
+    display: flex;
+    width: clamp(1rem,15vw,20rem);
+    height: fit-content;
+    font-size:clamp(0.7rem,1.3vw,1.3rem);
+    padding-left:clamp(2rem,4vw,4.2rem);
+}
+
+.Line-and-percentage{
+    display: flex;
+    width: 80%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17%;
+    gap: 4%;
+}
+
+.OuterLine{
+    width: 60%;
+    height: 40%;
+    border-radius: 1rem;
+    background-color: rgb(0, 251, 255);
+}
+
+.LineOfLevel{
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: rgb(200, 255, 0);
+}
+
+.QuotsContainer{
+    display: flex;
+    width: 18%;
+    height: 95%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Quotes{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    width: 74%;
+    height: 75%;
+    border-radius: 2rem;
+    background: linear-gradient(
+        135deg,
+        #2b1aad75,
+        rgba(17, 50, 133, 0.858)
+    );
+
+    border: 1px solid rgba(130,190,255,.25);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,140,255,.18),
+        inset 0 1px 1px rgba(255,255,255,.18),
+        inset 0 -1px 2px rgba(0,0,0,.25);
+}
+
+.QuoteTextContainer{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+}
+
+.QuoteTextContainer p{
+    line-height: 2;
+}
+
+.QuoteTextContainer i{
+    align-self:self-start;
+}
+
+.Advancement{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+
+
+.CurrentStreek{
+     display: flex;
+    flex-direction: column;
+    width:20%;
+    height: 100%;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+
+    background: rgba(110, 85, 23, 0.5);
+    border-top: 2px solid #fb923c;
+    border-bottom:2px solid #fb923c;
+}
+
+
+.sticker-text{
+    display: flex;
+    width: 100%;
+    height: 40%;
+        border-radius: 1rem;
+        align-items: center;
+        gap: 5%;
+    }
+
+.sticker{
+    
+     width:26%;
+     height: 100%;
+     background-image: url(photos/fire.png);
+     background-size: cover;
+     background-position: center;
+     border-radius: 3rem;
+     background-color: #874b1986;
+    
+   
+}
+
+.TextOfStreeek{
+    font-size: larger;
+}
+
+
+.num{
+  display: flex;
+    width: 100%;
+    height: 40%;
+    gap: 4%;
+        border-radius: 1rem;
+}
+
+.spanned1{
+
+font-size: 3rem;
+margin-left: 8%;
+font-weight: 600;
+align-self: center;
+}
+
+.spanedText{
+    
+    font-size: 1.9rem;
+    font-weight: 500;
+   align-self:center ;
+   padding-top: 4%;
+}
+
+
+.lastDiv{
+
+ display: flex;
+    width: 100%;
+    height: 20%;
+        border-radius: 1rem;
+      align-items: center;
+      font-size: large;
+      padding-left: 2%;
+color: #fb923c;
+}
+
+
+
+
+
+
+/* ============================================================
+   ANALOG CLOCK — sizing only.
+   The dark blue theme itself now lives in clock-ui.local.css
+   (loaded in index.html), so no color overrides are needed here.
+   ============================================================ */
+
+#analog-clock-dark {
+    width: 12rem;
+    height: 12rem;
+}
+    #analog-clock-dark{
+        display:none;
+       
+    }
+
+@media(max-width:1300px){
+    .QuotsContainer{
+        display: none;
+    }
+    #analog-clock-dark{
+        display:flex;
+        width: 20%;
+        height: 60%;
+    }
+}
+
+@media(max-width:1200px){
+
+.Profile-records-informationsDiv{
+    justify-content: space-around;
+}
+
+}
+
+
+.CompletionRate{
+
+  display: flex;
+    flex-direction: column;
+    width:20%;
+    height: 100%;
+        padding: 0.6rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background: rgba(36, 120, 27, 0.496);
+    border-top: 2px solid #179e4b;
+    border-bottom:2px solid #3cfb62;
+
+
+}
+
+
+
+.sticker2{
+    
+     width:28%;
+     height: 100%;
+     background-image: url(photos/completionrate.png);
+     background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+     border-radius: 1rem;
+     background-color: #19872886;
+    
+   
+}
+
+.TextOfCompletiopnRate{
+    font-size: larger;
+}
+
+
+.num2{
+  display: flex;
+    width: 100%;
+    height: 40%;
+    gap: 4%;
+    font-size: 3rem;
+margin-left: 8%;
+font-weight: 600;
+align-items: center;
+        border-radius: 1rem;
+}
+
+
+
+
+
+.lastDiv2{
+
+ display: flex;
+    width: 100%;
+    height: 20%;
+        border-radius: 1rem;
+      align-items: center;
+      font-size: large;
+      padding-left: 2%;
+color: #34f62a;
+}
+
+
+
+
+
+
+
+
+.NotesCreated{
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    height: 100%;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background: rgba(52, 9, 74, 0.459);
+    border-top: 2px solid #9143c2;
+    border-bottom:2px solid #9143c2;
+}
+
+
+
+
+.sticker3{
+    
+     width:28%;
+     height: 100%;
+     background-image: url(photos/NotesCreated.png);
+     background-size: cover;
+background-position: center;
+     border-radius: 2rem;
+     background-color: #6d17d73b;
+    
+   
+}
+
+.TextOfNotesCreated{
+    font-size: larger;
+}
+
+
+.num3{
+  display: flex;
+    width: 100%;
+    height: 40%;
+    gap: 4%;
+    font-size: 3rem;
+margin-left: 8%;
+font-weight: 600;
+align-items: center;
+        border-radius: 1rem;
+}
+
+
+
+
+
+.lastDiv3{
+
+ display: flex;
+    width: 100%;
+    height: 20%;
+        border-radius: 1rem;
+      align-items: center;
+      font-size: large;
+      padding-left: 2%;
+color: #983cfb;
+}
+
+
+
+
+
+
+
+
+
+.TasksCreated{
+     display: flex;
+    flex-direction: column;
+    width:20%;
+    height: 100%;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+
+    background: rgba(9, 20, 108, 0.459);
+    border-top: 2px solid #3a5fc6;
+    border-bottom:2px solid #3a5fc6;
+}
+
+
+
+
+
+
+.sticker4{
+    
+     width:25%;
+     height: 100%;
+     background-image: url(photos/TasksCompleted.png);
+     background-size: cover;
+background-position: center;
+     border-radius: 2rem;
+     background-color: #3417d73b;
+    image-rendering: auto;
+   
+}
+
+
+
+
+
+
+.TextOfTaskesCreated{
+    font-size: larger;
+}
+
+
+.num4{
+  display: flex;
+    width: 100%;
+    height: 40%;
+    gap: 4%;
+    font-size: 3rem;
+margin-left: 8%;
+font-weight: 600;
+align-items: center;
+        border-radius: 1rem;
+}
+
+
+
+
+
+.lastDiv4{
+
+ display: flex;
+    width: 100%;
+    height: 20%;
+        border-radius: 1rem;
+      align-items: center;
+      font-size: large;
+      padding-left: 2%;
+color: #539ae6;
+}
+
+
+
+.Statistics{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+      justify-content: center;
+    
+}
+
+
+.StatisticsContainer{
+    display: flex;
+    width: 87%;
+    height: 80%;
+    border-radius: 1rem;
+    align-items: center;
+        gap: 1%;
+
+}
+
+.BarsOfState{
+    display: flex;
+    width: 40%;
+    height: 90%;
+    flex-direction: column;
+border-radius: 1rem;
+    background-color: transparent;
+  padding: 0.4rem;
+    border: 1px solid rgba(130, 190, 255, 0.807);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,140,255,.18),
+        inset 0 1px 1px rgba(255,255,255,.18),
+        inset 0 -1px 2px rgba(0,0,0,.25);
+}
+
+
+
+/* ===== Recent Activity Scrollbar ===== */
+
+.activityDiv::-webkit-scrollbar{
+    width: 6px;
+    
+}
+
+.activityDiv::-webkit-scrollbar-track{
+    background: rgba(188, 192, 210, 0.35);
+}
+
+.activityDiv::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        180deg,
+        rgb(87, 200, 228),
+        rgb(63, 118, 255)
+    );
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.activityDiv::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(
+        180deg,
+        rgb(120, 220, 245),
+        rgb(87, 200, 228)
+    );
+}
+
+.activityDiv::-webkit-scrollbar-corner{
+    background: transparent;
+}
+
+
+
+
+
+.Activity{
+     display: flex;
+    width: 25%;
+    height: 90%;
+    flex-direction: column;
+border-radius: 1rem;
+    background: transparent;
+     overflow: hidden;
+    border: 1px solid rgba(130, 190, 255, 0.807);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,140,255,.18),
+        inset 0 1px 1px rgba(255,255,255,.18),
+        inset 0 -1px 2px rgba(0,0,0,.25);
+
+}
+
+.activityDiv{
+       display: flex;
+    width: 100%;
+    height: 100%;
+gap: 3%;
+
+        padding-top: 1%;
+        padding-bottom: 2%;
+        overflow-x: hidden;
+}
+
+
+
+
+
+
+.DotsDiv{
+display: flex;
+flex-direction: column;
+width: fit-content;
+height: fit-content;
+padding-top: 3%;
+padding-left: 2%;
+
+align-items: flex-end;
+
+}
+
+.ActivityContainer{
+    display: flex;
+flex-direction: column;
+width: 75%;
+height: 100%;
+gap: 2%;
+ align-items: flex-start;
+
+
+}
+
+.activity{
+    display: flex;
+    width: 100%;
+    height: 20%;
+   border-radius: 0.4rem;
+flex-shrink: 0;
+gap: 5%;
+padding-left: 3%;
+ background-color: #121f6a46;
+}
+
+.ProfileInsideAct{
+    display: flex;
+    width: 25%;
+    height: 100%;
+}
+
+
+
+
+
+
+.textInsideAct{
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+
+}
+.DateOfActivity{
+    font-size: 0.9rem;
+color: rgb(87, 200, 228);
+}
+
+.TheActivity{
+        font-size: 1rem;
+color: rgb(87, 228, 216);
+
+}
+.WhatsDone{
+    font-size: 0.9rem;
+color: rgb(87, 228, 216);
+
+}
+
+
+
+.ProfileInsideAct-Container{
+    display: flex;
+    width: 20%;
+    height:56%;
+    justify-content: center;
+    align-items: center;
+     background-color: rgba(10, 23, 72, 0.425); /* was solid #64c5ca — needs alpha to see through it */
+-webkit-backdrop-filter: blur(10px) saturate(180%);
+backdrop-filter: blur(10px) saturate(180%); /* keep filters matching */
+border-radius: 2rem;
+margin-top: 3%;
+}
+
+
+.ProfileInsideAct{
+    background-image: url(photos/DoneTask-sticker.png);
+     background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+   width: 70%;
+   height: 70%;
+    image-rendering: auto;
+   
+   
+}
+
+
+.ProfileInsideAct-Container2{
+  display: flex;
+    width: 20%;
+    height:56%;
+    justify-content: center;
+    align-items: center;
+      backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background: rgba(36, 120, 27, 0.496);
+border-radius: 2rem;
+margin-top: 3%;
+
+
+
+}
+
+
+
+
+.completeTaskSticker{
+     background-image: url(photos/correct-Sticker.png);
+     background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+   width: 70%;
+   height: 70%;
+    image-rendering: auto;
+}
+
+
+
+
+
+
+.PointContainer{
+display: flex;
+flex-direction: column;
+width: fit-content;
+height: fit-content;
+align-items: center;
+
+}
+
+
+
+.lineOfActivity2{
+ 
+    width: 15%;
+    height:5rem;
+
+    background-color: #176f9e;
+}
+
+.lineOfActivity3{
+ 
+    width: 5%;
+    height:0.5rem;
+
+    background-color: #176f9e;
+}
+
+
+
+
+
+
+.point{
+    width: 1.2rem;
+    height:1.2rem;
+    border-radius: 1rem;
+    background-color: #13dede89
+}
+
+
+
+
+
+
+.recentActivityText{
+   display:flex;
+   width: 100%;
+   height: 10%;
+align-items: center;
+padding-left: 6%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+
+.Achievements{
+    display: flex;
+    width: 30%;
+    height: 90%;
+border-radius: 1rem;
+    background: transparent;
+
+
+    border: 1px solid rgba(130, 190, 255, 0.807);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,140,255,.18),
+        inset 0 1px 1px rgba(255,255,255,.18),
+        inset 0 -1px 2px rgba(0,0,0,.25);
+}
+
+
+
+
+
+
+
+
+ 
+ 
+/* ============================================================
+   WEEKLY ACTIVITY CHART — lives inside .BarsOfState
+   Tasks done (blue, coefficient x2) vs Notes added (purple, coefficient x1)
+   ============================================================ */
+ 
+.BarsOfState-inner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    gap: 1rem;
+}
+ 
+.BarsOfState-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+ 
+.BarsOfState-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+ 
+.BarsOfState-legend{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+}
+ 
+.legend-item{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+ 
+.legend-dot{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+ 
+.dot-tasks{
+    background-color: #539ae6;
+}
+ 
+.dot-notes{
+    background-color: #983cfb;
+}
+ 
+.legend-coef{
+    color: rgba(255,255,255,0.45);
+    font-size: 0.78rem;
+}
+ 
+.BarsOfState-canvasWrap{
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+
+
+
+.TasksNotesDivOf.OfChart{
+display: flex;
+width: 100%;
+height: 20%;
+
+justify-content: space-around;
+align-items: center;
+}
+
+.TasksDone{
+    display: flex;
+    width: 35%;
+    height: 90%;
+    flex-direction: column;
+    justify-self:center;
+    border-radius: 1rem;
+    
+       
+   
+    padding-right:0.6rem ;
+
+      backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background: rgba(36, 120, 27, 0.496);
+    border-top: 2px solid #179e4b;
+    border-bottom:2px solid #3cfb62;
+
+}
+
+
+
+.NotesAdded{
+    display: flex;
+    width: 35%;
+    height: 90%;
+
+    flex-direction: column;
+    justify-self: center;
+        border-radius: 1rem;
+    padding-right:0.6rem ;
+   backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+   background: rgba(52, 9, 74, 0.459);
+    border-top: 2px solid #9143c2;
+    border-bottom:2px solid #9143c2;
+
+}
+
+.StickerText{
+    display: flex;
+    width: 100%;
+    height: 50%;
+
+}
+
+.DoneTasksSticker{
+       width:20%;
+     height: 100%;
+     background-image: url(photos/Correct.png);
+     background-size: cover;
+background-position: center;
+    image-rendering: auto;
+   
+}
+
+.AddedNotesSticker{
+    width:30%;
+     height: 100%;
+     background-image: url(photos/AddedNotes-Sticker.png);
+     background-size: cover;
+background-position: center;
+    image-rendering: auto;
+}
+
+
+
+
+.StickerText  p{
+    font-size: 0.9rem;
+}
+
+
+.numTasksDone{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height:30% ;
+justify-content: center;
+    align-items: center;
+font-size: x-large;
+}
+

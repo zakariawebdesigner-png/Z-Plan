@@ -1,0 +1,343 @@
+html{
+font-size: 40px;
+}
+
+body{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+width: 100vw;
+height: 100vh;
+background-image: url(background1/pic1.jpg);
+/*background-color: aliceblue;*/
+background-size: cover;
+background-position: center;
+
+}
+
+
+.big-title{
+position: fixed;
+ color: transparent;
+font-size: 2rem;
+ 
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(210,170,255,0.85) 25%,
+    rgba(140,80,255,0.55) 55%,
+    rgba(90,40,200,0.35) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  text-shadow:
+    0 1px 0 rgba(130, 30, 177, 0.8),
+    0 3px 15px rgba(140,80,255,0.35);
+
+  /* smooth iOS look */
+  letter-spacing: 1px;
+  
+top: 1rem;
+font-family: 'Poppins',sans-serif;
+opacity:0 ;
+ transform: translateY(40vh);
+animation: moove-title 1.6s linear forwards;
+
+  
+}
+  
+
+@keyframes moove-title{
+
+0%{
+
+opacity:0 ;
+ transform: translateY(40vh);
+}
+
+25%{
+opacity:0 ;
+ transform: translateY(30vh);
+
+}
+50%{
+opacity:0 ;
+ transform: translateY(20vh);
+
+}
+75%{
+opacity:0.5 ;
+ transform: translateY(10vh);
+
+}
+100%{
+opacity:1 ;
+ transform: translateY(0);
+
+}
+
+}
+
+
+
+.popup-alert{
+
+
+position: absolute;
+display: flex;
+width:10rem;
+height: 4rem;
+flex-direction: column;
+align-self: center;
+margin-top: 8rem;
+z-index: 1;
+background-color: rgb(77, 89, 110);
+display: NONE;
+border: 1px solid black;
+
+}
+
+
+.part1{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+background-color: white;
+     height: 30%;
+padding-right: 0.05rem;
+}
+
+
+.alert-message{
+
+font-size: large;
+
+font-family: 'Poppins',sans-serif;
+}
+
+
+.delete-alert{
+
+ height:0.8rem;
+ width: 1.3rem;
+ margin-top: 0.2rem;
+ background-color: red;
+ outline: none;
+ border: 1px black solid;
+ border-radius: 0.1rem;
+
+}
+
+.delete-alert:hover{
+
+transform:scale(0.95);
+
+}
+
+
+
+.popup-alert p{
+
+font-size: 0.7rem;
+text-align: center;
+font-family: 'Poppins',sans-serif;
+
+}
+
+
+.formDiv{
+
+display: flex;
+width: 100%;
+height: fit-content;
+justify-self: center;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+
+
+
+form{
+display: flex;
+flex-direction: column;
+align-self: center;
+width: 9rem;
+height: 11rem;
+margin-top: 4.3rem;
+border-radius: 0.5rem;
+background-color: rgba(158, 156, 236, 0.25);
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+
+
+border: 1px solid rgba(255,255,255,0.3);
+box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+opacity: 0;
+animation: opacity-form 1s linear forwards;
+
+}
+
+
+.PasswordErrorDetect{
+  position: absolute;
+  display: flex;
+  align-items: center;
+width: 10rem;
+padding-bottom: 0.1rem;
+height: fit-content;
+transform: translateX(65vw) translateY(26.4vh);
+background-color: rgb(218, 65, 65);
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+
+border-radius: 0.2rem;
+border: 1px solid rgba(255,255,255,0.3);
+box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+@keyframes opacity-form {
+
+0%{
+
+opacity:0 ;
+transform: translateY(6vh);
+}
+
+
+50%{
+opacity:0.5 ;
+transform: translateY(3vh);
+
+
+}
+100%{
+opacity:1 ;
+transform: translateY(0);
+
+}
+}
+
+
+input{
+align-self: center;
+padding-left: 0.2rem;
+width: 70%;
+height: 0.9rem;
+font-size: 0.5rem;
+border-radius: 0.3rem ;
+outline: none;
+margin-top: 0.3rem;
+background-color: transparent;
+}
+
+
+.password{
+  font-size: 0.45rem;
+}
+.login-p{
+text-align: center;
+font-family: 'Poppins',sans-serif;
+font-weight: 700;
+  padding: 0;
+  margin-bottom: 0.1rem;
+  margin-top: 0.5rem;
+
+}
+
+
+.text-after-login{
+font-size: 0.4rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+  font-weight: 300;
+
+}
+
+::placeholder{
+    font-size: large;
+
+}
+
+
+
+
+
+.submiteBtn-and-randomPass{
+position: relative;
+display: flex;
+flex-direction: column;
+
+width: 100%;
+height: 14%;
+margin-top: 0.5rem;
+
+}
+
+
+
+
+.submite{
+width: 35%;
+font-size: 0.68rem;
+border-radius: 0.25rem;
+border: none;
+transition:  transform 0.1s linear ;
+cursor: pointer;
+align-self: center;
+}
+
+.submite:hover{
+transform: scale(1.1);
+
+background-color: rgb(200, 234, 34);
+
+}
+
+.RandomPass{
+  position: absolute;
+  top: 0.6rem;
+padding-left: 0.2rem;
+font-size: 0.4rem;
+font-family: 'Poppins',sans-serif;
+text-decoration: underline;
+color: blue;
+cursor: pointer;
+}
+
+.RandomPass:hover{
+
+transform: scale(1.05);
+color:rgb(212, 255, 0);
+
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+

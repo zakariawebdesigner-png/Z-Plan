@@ -1,0 +1,93 @@
+ html{
+background-color: rgb(101, 97, 97);
+ }
+
+ body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+overflow: hidden;
+ }
+
+
+ .logo{
+    background-image:url(photos/pic15.png) ;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 20%;
+    transform: translateY(-3vh);
+    animation: moveWaite 1s infinite alternate ease-in-out;
+ }
+
+
+ @keyframes moveWaite{
+    from{
+    transform: translateY(-3vh);
+
+    }
+    to{
+    transform: translateY(1vh);
+
+    }
+ }
+
+
+ .Dots{
+   display: flex;
+   width: 10vw;
+   height: 5vh;
+   justify-content: space-evenly;
+transform:rotate(180deg);
+
+ }
+
+ .Points{
+   width: 9%;
+   height: 40%;
+   background-color: black;
+   border-radius: 1rem;
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   background-color: rgba(34, 34, 41, 0.597);
+              
+
+
+   animation:moveDot 1s infinite alternate  ease-in-out  ;
+   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+ }
+
+
+#point1 {
+    animation-delay: -0s;
+ }
+
+#point2 {
+    animation-delay: -0.15s;
+ }
+
+#point3 { 
+   animation-delay: -0.30s;
+ }
+
+#point4 {
+    animation-delay: -0.45s;
+ }
+
+
+
+ @keyframes  moveDot{
+   from{
+      transform: translateY(0);
+     
+   }
+
+   to{
+           transform: translateY(2vh);
+
+   }
+ }

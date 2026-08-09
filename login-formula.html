@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 5</title>
+    <link href="style.css" rel="stylesheet" >
+</head>
+
+
+
+<body>
+
+<b class="big-title" >The jurney begins now</b>
+
+
+<div class="popup-alert" id="alert">
+    <div class="part1">
+         <p class="alert-message">Alert message</p>
+         <button class="delete-alert" id="delete-alert">x</button>
+    </div>
+       
+
+    <p id="alert-type-message">Email address is messing!!!⚠️</p>
+</div>
+
+<div class="popup-alert" id="alert-password-length">
+    <div class="part1">
+         <p class="alert-message">Alert message</p>
+         <button class="delete-alert" id="delete-alert2">x</button>
+    </div>
+       
+
+    <p id="alert-type-message">Password length must be at least 8 charachtors length!!!⚠️</p>
+</div>
+
+<div class="formDiv">
+<form id="form">      
+
+    <p class="login-p">Log in </p>
+     <p class="text-after-login">complete the form</p>
+  <input class="name" id="name" placeholder="Name" type="text" maxlength="15" minlength="5" required >
+
+    <input class="surname" id="surname" placeholder="Surname" type="text" maxlength="15" minlength="5" required >
+
+    <input class="email" id="email" placeholder="Email" type="email" maxlength="25" minlength="5"  >
+
+  <input class="age" placeholder="Age" type="number" min="10" max="100"  required >
+    <input class="password" id="password" placeholder="Password" type="text" maxlength="19"  required>
+<div class="submiteBtn-and-randomPass">
+    <button class="submite"  id="submit_btn" type="submit"  >Submite</button>
+    <p id="RandomPass" class="RandomPass">Random Password</p>
+
+</div>
+
+
+
+</form>
+
+<div class="PasswordErrorDetect">⚠️</div>
+
+
+</div>
+
+
+
+
+<script src="javascript.js" ></script>
+
+
+</body>
+
+
+
+</html>

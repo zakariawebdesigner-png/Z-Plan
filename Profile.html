@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Profile-style.css" rel="stylesheet" >
+        <link href="clock-ui.local.css" rel="stylesheet" >
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@clock-ui/dom@0.1.1/dist/index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+ </head>
+ <body>
+    
+     <header>
+
+       
+         <div class="Logo-text">
+            <div class="logo"></div>
+            <h1 class="Logotext">My To Do list</h1>
+         </div>
+
+    
+
+          <div class="Gear-Bell">
+            <i class="fa-solid fa-bell" ></i>
+            <div class="gear"></div>
+            <div class="Profile"  id="Profile"></div>
+          </div>
+     </header>
+   
+
+        
+           <section class="Profile-records-informationsDiv">
+
+                 
+                       <div class="ProfilePic-text">
+
+                           <div class="ProfilePic" id="ProfilePic"></div>
+                            <div class="InformationsText-container">
+                                       <p class="Salutate">Welcome Back,</p>
+                                        <div class="name">Zakaria👋</div>
+                                        <p class="motivation">Organize , Focus , Achieve</p>
+                                        
+                                        <div class="Member-email">
+                                               <div class="MemberSince">
+                                                    <i class="fa-regular fa-calendar-days"></i>
+                                                    Memeber since 2026/10/26
+                                                </div>
+                                            <div class="Email">
+                                                <i class="fa-solid fa-envelope"></i>
+                                                Zakaria@gmail.com
+                                        
+                                             </div>
+                                        </div>
+                                     
+                                    </div>
+                            
+                                    <div class="RecordsDiv">
+                        
+                                         <div class="LevelSticker"></div> 
+                                            <div class="XPNum">13000 / 5000XP</div>
+
+                                         <div class="Line-and-percentage">
+                                            <div class="OuterLine">
+                                                   <div class="LineOfLevel"></div>
+                                            </div>
+                                              
+                                               <div class="percentage">70%</div>
+                                         </div>
+                                        
+                         
+                       
+                                    </div>
+                       
+                              <div class="QuotsContainer">
+                                      <div class="Quotes">
+                                          <div class="QuoteTextContainer">
+                                                    <i class="fa-solid fa-quote-left"></i>
+
+                                                      <p class="quote">Consistency is what transforms average into excellence. </p>
+                                                     
+                                                  
+
+                                                           <span>Keep going! 🚀</span>
+                                          </div>
+                                                 
+                                        </div>
+
+                              </div>
+                                     <div id="analog-clock-dark"></div>
+
+                         </div>
+                             <div class="Advancement">
+                                    <div class="TasksCreated">
+
+                                                         <div class="sticker-text">
+                                                 <div class="sticker4"></div>
+                                                 <div class="TextOfTaskesCreated">Taskes Created </div>
+                                             </div>
+                                              <div class="num4">46</div>
+                                             <div class="lastDiv4">View All Taskes </div>
+                                    </div>
+                                    <div class="NotesCreated">
+                                            <div class="sticker-text">
+                                                 <div class="sticker3"></div>
+                                                 <div class="TextOfNotesCreated">Notes Created</div>
+                                             </div>
+                                         <div class="num3">30</div>
+                                         <div class="lastDiv3">View All Notes </div>
+                                      
+                                    </div>
+
+                                    <div class="CurrentStreek">
+                                         <div class="sticker-text">
+                                            <div class="sticker"></div>
+                                            <div class="TextOfStreeek">Current Streek</div>
+                                         </div>
+                                         <div class="num"><span class="spanned1" >17</span> <span class="spanedText" >days</span></div>
+                                         <div class="lastDiv">keep it Up🔥</div>
+                                      
+                                        </div>
+                                    <div class="CompletionRate">
+                                        <div class="sticker-text">
+                                               <div class="sticker2"></div>
+                                            <div class="TextOfCompletiopnRate">Completion Rate </div>
+                                        </div>
+                                        <div class="num2">90%</div>
+                                        <div class="lastDiv2">Amazing job  ⭐</div>
+                                    </div>
+                             </div>
+
+                         </div>
+                         
+
+                      
+                 
+             </section>
+
+       <section class="Statistics">
+
+            <div class="StatisticsContainer">
+                  <div class="BarsOfState">
+                   <div class="BarsOfState-inner">
+                       <div class="BarsOfState-header">
+                           <h2 class="BarsOfState-title">Weekly activity</h2>
+                           <div class="BarsOfState-legend">
+                               <span class="legend-item"><span class="legend-dot dot-tasks"></span>Tasks done <span class="legend-coef">×2</span></span>
+                               <span class="legend-item"><span class="legend-dot dot-notes"></span>Notes added <span class="legend-coef">×1</span></span>
+                           </div>
+                       </div>
+                       <div class="BarsOfState-canvasWrap">
+                           <canvas id="weeklyStateChart" role="img" aria-label="Bar chart of tasks done and notes added per day for the current week"></canvas>
+                       </div>
+                   </div>
+               
+                     <div class="TasksNotesDivOf OfChart">
+                           <div class="TasksDone">
+                                 <div class="StickerText">
+                                     <div class="DoneTasksSticker"></div>
+                                     <p>Taskes Completed</p>
+                                 </div>
+                                 <div class="numTasksDone">
+                                      28 
+                                 </div>
+                           </div>
+                           <div class="NotesAdded">
+                                  <div class="StickerText">
+                                     <div class="AddedNotesSticker"></div>
+                                     <p>Notes Added</p>
+                                 </div>
+                                 <div class="numTasksDone">
+                                      56 
+                                 </div>
+                           </div>
+                     </div>
+                </div>
+                <div class="Activity">
+                    <div class="recentActivityText">Recent Activity</div>
+                    <div class="activityDiv">
+                    <div class="DotsDiv">
+                         
+                       
+                      
+                        <div class="PointContainer">
+                            <div class="lineOfActivity3"></div>
+                            <div class="point"></div>
+                        </div>
+
+                        
+                        <div class="PointContainer">
+                            <div class="lineOfActivity2"></div>
+                            <div class="point"></div>
+                        </div>
+   
+                        <div class="PointContainer">
+                            <div class="lineOfActivity2"></div>
+                            <div class="point"></div>
+                        </div>
+                          <div class="PointContainer">
+                            <div class="lineOfActivity2"></div>
+                            <div class="point"></div>
+                        </div>
+                          <div class="PointContainer">
+                            <div class="lineOfActivity2"></div>
+                            <div class="point"></div>
+                        </div>
+                        
+                         
+                         
+                        
+                      
+                     
+                    </div>
+
+                    <div class="ActivityContainer">
+                        <div class="activity">
+                            <div class="ProfileInsideAct-Container">
+                                <div class="ProfileInsideAct"></div>
+                            </div>
+                              
+                            <div class="textInsideAct">
+                                    <div class="DateOfActivity">
+                                        Today, 11:30 AM
+                                    </div>
+                               <div class="TheActivity">
+                                   Created a new Task
+                               </div>
+                               <div class="WhatsDone">"Math Homework"</div>
+                            </div>
+                           
+                        </div>
+
+                       <div class="activity">
+                               <div class="ProfileInsideAct-Container">
+                                <div class="ProfileInsideAct"></div>
+                            </div>
+                            <div class="textInsideAct">
+                                    <div class="DateOfActivity">
+                                        Today, 11:30 AM
+                                    </div>
+                               <div class="TheActivity">
+                                   Created a new Note
+                               </div>
+                                <div class="WhatsDone">"Project Ideas"</div>
+                            </div>
+                           
+                        </div>
+                        <div class="activity">
+                               <div class="ProfileInsideAct-Container2">
+                                <div class="completeTaskSticker"></div>
+                            </div>
+                            <div class="textInsideAct">
+                                    <div class="DateOfActivity">
+                                        Today, 11:30 AM
+                                    </div>
+                               <div class="TheActivity">
+                                   Complete  a Task
+                               </div>
+                                <div class="WhatsDone">"Css Project"</div>
+                            </div>
+                           
+                        </div>
+                        <div class="activity">
+                              <div class="ProfileInsideAct-Container">
+                                <div class="ProfileInsideAct"></div>
+                            </div>
+                            <div class="textInsideAct">
+                                    <div class="DateOfActivity">
+                                        Today, 11:30 AM
+                                    </div>
+                               <div class="TheActivity">
+                                Changed  Avatar
+                               </div>
+                            </div>
+                           
+                        </div>
+                        <div class="activity">
+                               <div class="ProfileInsideAct-Container">
+                                <div class="ProfileInsideAct"></div>
+                            </div>
+                            <div class="textInsideAct">
+                                    <div class="DateOfActivity">
+                                        Today, 11:30 AM
+                                    </div>
+                               <div class="TheActivity">
+                                   Delete a Task
+                               </div>
+                                <div class="WhatsDone">"Gym"</div>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="Achievements"></div>
+            </div>
+       </section>      
+
+               
+            <script src="statistics-chart.js"></script>
+<script src="clock-ui.local.js"></script>
+
+    <script  src="ProfileJavaScript.js" ></script>
+ </body>
+ </html>

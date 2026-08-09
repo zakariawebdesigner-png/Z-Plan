@@ -1,0 +1,2074 @@
+ 
+
+
+html{
+font-size: 16px;
+font-family: 'Poppins',sans-serif;
+
+}
+
+@view-transition{
+  navigation:auto;
+}
+
+
+
+
+::view-transition-group(main-page){
+
+  animation-duration: 1s;
+  animation-timing-function: ease;
+
+}
+
+
+
+
+
+::view-transition-old(main-page){
+  animation-name:slideout ;
+}
+
+::view-transition-new(main-page){
+  animation-name:slideIn ;
+}
+
+
+
+
+
+
+main{
+  display: flex;
+flex-direction: column;
+width: 100%;
+min-height: 100%;
+
+}
+
+
+
+
+
+
+main{
+  view-transition-name:main-page ;
+}
+
+
+
+
+@keyframes slideout{
+    
+  to{
+   translate:-100vw;
+  }
+}
+
+@keyframes slideIn{
+  from{
+   translate:100vw;
+  }
+}
+
+
+
+
+body.lightMode{
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
+width: 100%;
+
+min-height: 100vh;
+margin-left: 0;
+margin-bottom: 0;
+scroll-behavior: smooth  ;
+overflow-y:auto;
+  background:
+        radial-gradient(
+            circle at top left,
+            rgba(95, 134, 213, 0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(85, 185, 200, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #4251a3 0%,
+            #5762b8 50%,
+            #424a85 100%
+        );
+
+}
+
+body.darkMode{
+  display: flex;
+flex-direction: column;
+overflow-x: hidden;
+width: 100vw;
+min-height: 80vh;
+margin-left: 0;
+margin-bottom: 0;
+scroll-behavior: smooth  ;
+overflow-y:auto;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(52,120,255,0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(77,232,255,0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #040c39 0%,
+            #03082b 50%,
+            #02051d 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.2);
+
+
+
+    z-index: 9999999999;
+    visibility:hidden;
+    opacity: 0;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+}
+
+.overlay.active{
+      opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+.DaillyMissionsContainer{
+position: relative;
+display: flex;
+min-width:0;
+flex: 0 0 auto;
+min-height: 0;
+flex-direction: column;
+gap: clamp(1rem,10vw,3rem);
+margin-top: 7rem;
+}
+
+
+
+
+
+.headerOf-Dailly{
+  display: flex;
+  width: 95%;
+  height: 10%;
+ margin-top: 1rem;
+align-self: center;
+  align-items: center;
+  justify-content: space-between;
+background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
+
+ box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius: 1rem;
+}
+
+
+.RoutinePage-title{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 90%;
+    padding-left: 5%;
+}
+
+.titleOf-routine{
+  font-size: x-large;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.routine-motivate-text{
+    font-size: large;
+margin-top: 0;
+}
+
+.headerClicks{
+  display: flex;
+  width:15%;
+  height: 50%;
+  align-items: center;
+ justify-content: center;
+
+}
+
+.AddRoutine-btn{
+  display: flex;
+  width:clamp(3rem,50vw,7rem);
+  padding: 0.5rem;
+ justify-content: space-between;
+  align-items: center;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: 3.5s ease ;
+      transition: 0.5s ease ;
+
+ background:
+        linear-gradient(
+            145deg,
+            rgba(82, 203, 222, 0.528),
+            rgba(23, 173, 228, 0.533)
+        );
+
+}
+
+.addRoutineText{
+  line-height: 0;
+}
+
+
+.AddRoutine-btn:hover{
+
+  transform: scale(1.1);
+
+  background-color: #00ffff;
+}
+
+.AddRoutine-btn:active{
+
+    transform: scale(0.95);
+  
+}
+
+
+
+.AddRoutine-btn:hover .plus{
+
+  transform: rotate(360deg);
+  color: black;
+  
+  
+}
+
+
+
+.plus{
+  font-size: x-large;
+     transition: 0.5s ease ;
+     color: white;
+
+
+}
+
+
+.RoutineForm{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 95%;
+left:30vw;
+  top: 43%;
+background-color:#3eb6ddc4;
+border: solid 1px rgb(0, 247, 255);
+border-radius: 1rem;
+overflow: hidden;
+  opacity: 0;
+  transform: translateY(40vh);
+  pointer-events: none;
+z-index: 9999999999;
+}
+
+.RoutineForm.showRoutineForm{
+animation: show-Form 0.20s linear forwards;
+
+}
+
+
+@keyframes show-Form {
+
+  0%{
+transform: translateY(40vh);
+opacity: 0;
+  }
+
+50%{
+
+transform: translateY(-20vh);
+opacity: 0.5;
+
+
+}
+
+  100%{
+transform: translateY(-40vh);
+opacity: 1;
+  pointer-events: all;
+
+  }
+  
+}
+
+
+
+
+.Tittle-and-deleteBtn{
+
+display: flex;
+width: 100%;
+height: 10%;
+  justify-content: flex-end;
+
+}
+
+
+
+.RoutinesLogo-container{
+  display: flex;
+  width:7%;
+  height: 70%;
+  justify-content:center ;
+  align-items: center;
+  border-radius: 0.5rem;
+  align-self: center;
+background:
+        linear-gradient(
+            135deg,
+            rgba(85, 64, 64, 0.08),
+            rgba(82, 65, 65, 0.02)
+        );
+
+
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
+      }
+
+
+
+.RoutinesLogo-container   i{
+  font-size: xx-large;
+  color: #044573;
+}
+
+
+
+
+.RoutineForm-text{
+  display: flex;
+  flex-direction: column;
+  width: 71%;
+  height: 100%;
+  padding-left: 3%;
+}
+
+
+.RoutineForm-title{
+  font-size: x-large;
+  font-weight:600 ;
+  line-height: 0;
+  margin-bottom: 0;
+  color: #c8d0e6df;
+
+}
+
+
+.RoutineForm-discription{
+   color: #c8d0e6;
+}
+
+
+.RoutineDeleteButton{
+  display: flex;
+  width: 15%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.RoutineDeleteButton button{
+ font-family: 'Poppins','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-large;
+  height:3rem ;
+  width: 2.9rem;
+  border: solid 1px  lightblue;
+  border-radius: 2rem;
+  background-color: #16238680;
+  
+  cursor: pointer;
+
+}
+
+
+
+
+.RootineDetails{
+  display: flex;
+width: 100%;
+height:45%;
+}
+
+
+.leftSIdeOf-line{
+    display: flex;
+    flex-direction: column;
+width: 50%;
+height:100%;
+justify-content: space-evenly;
+}
+
+
+.RoutinesTittle{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 28%;
+  padding-left: 4%;
+  padding-top:3% ;
+    justify-content: space-around;
+}
+
+.File{
+  background-image: url(photos/sheet.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:13%;
+  height: 80%;
+}
+
+
+
+.Labele-and-Pic{
+  display: flex;
+  width: 70%;
+  height: 40%;
+  align-items: center;
+     color: #ffffff;
+
+}
+
+
+
+.RoutinesTittle input{
+  width: 80%;
+  padding: 2%;
+  font-size: large;
+  border: none;
+  outline: none;
+  color: #2a008c;
+border-radius: 0.3rem;
+border:1px solid rgba(255,255,255,.18);
+
+    background:linear-gradient(
+        135deg,
+        rgba(73, 170, 179, 0.421),
+        rgba(29, 146, 152, 0.33)
+    );
+
+    
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.25),
+        inset 0 -1px 0 rgba(255,255,255,.05),
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+.RoutinesTittle input::placeholder{
+font-size: small;
+padding-left:2%;
+}
+
+
+
+.RoutinesCategory{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 65%;
+  padding-left: 4%;
+  gap: 6%;
+
+}
+
+.Labele-and-i{
+    display: flex;
+  width: 70%;
+  height: 20%;
+  align-items: flex-end;
+     color: #ffffff;
+}
+
+.Labele-and-i i{
+    font-size: large;
+  width: 13%;
+ 
+
+}
+
+
+
+.RoutinesCategory input{
+  position: relative;
+ width: 80%;
+  padding: 2%;
+  font-size: large;
+  border: none;
+  outline: none;
+  color: #2a008c;
+border-radius: 0.3rem;
+border:1px solid rgba(255,255,255,.18);
+
+    background:linear-gradient(
+        135deg,
+        rgba(73, 170, 179, 0.421),
+        rgba(29, 146, 152, 0.33)
+    );
+
+
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.25),
+        inset 0 -1px 0 rgba(255,255,255,.05),
+        0 8px 25px rgba(0,0,0,.25);
+        z-index: 99999;
+}
+
+
+#RoutinesCategory-input{
+  cursor: pointer;
+}
+
+
+
+
+#arrowCategory{
+position: absolute;
+left: 36%;
+top: 33%;
+z-index: 99999;
+transition: 0.3s ease;
+cursor: pointer;
+}
+
+#arrowCategory.RotateArrow{
+transform: rotate(180deg);
+}
+
+
+
+
+
+.RoutinesCategory input::placeholder{
+font-size: small;
+padding-left:2%;
+}
+
+
+.Categories{
+  display: flex;
+  width: 95%;
+  height: 45%;
+  flex-wrap: wrap;
+  gap: 2%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1%;
+transform: translateY(-7vh);
+  opacity: 0;
+  z-index: 999;
+  pointer-events: none;
+  background-color: #00ffff3f;
+  border: solid 1px rgb(0, 247, 255);
+}
+
+.Categories.moveCategory{
+  animation: move-category 0.2s linear  forwards;
+
+}
+
+
+
+@keyframes move-category{
+
+0%{
+transform: translateY(-7vh);
+opacity: 0;
+}
+
+50%{
+  transform: translateY(-4vh);
+opacity: 0.5;
+}
+
+
+100%{
+  transform: translateY(0);
+opacity: 1;
+  pointer-events: all;
+
+}
+
+
+}
+
+
+
+
+
+
+.Sport,.Health,.Work-Category,.Study,.Pray,.Others{
+ display: flex;
+  width: 19%;
+  height: 35%;
+  align-items: center;
+  border-radius: 0.3rem;
+  justify-content: space-around;
+  padding: 1%;
+  cursor: pointer;
+}
+
+.Categories div:hover{
+  
+  transform: translateY(-1vh) scale(1.2);
+
+}
+
+.Categories div:active{
+  
+  transform: scale(0.95);
+
+}
+
+
+
+.Pray{
+  color: #fff;
+background-color: #fdfdfd7a;
+border: solid #fff   0.5px;
+
+}
+
+
+.Others{
+
+  color: #00eeff;
+background-color: #10a5c67a;
+border: solid #00ffee   0.5px;
+
+}
+
+
+
+
+.Sport{
+
+  color: #ffe100;
+background-color: #c9951b7f;
+border: solid #ffe100   0.5px;
+}
+
+.Health{
+  color: #04971c;
+background-color: #21fb0093;
+border: solid #00ff26   0.5px;
+}
+
+.Work-Category{
+
+  color: #001aff;
+background-color: #00a3fbc1;
+border: solid #00d5ff   0.5px;
+
+}
+
+
+.Study{
+  color: #00eeff;
+background-color: #1b4fc97f;
+border: solid #00d5ff   0.5px;
+}
+
+
+.Personal-Category{
+ display: flex;
+  width: 27%;
+  height:35%;
+  align-items: center;
+  border-radius: 0.3rem;
+  justify-content: space-between;
+  padding: 1%;
+color: #0073ff;
+background-color: #5307807a;
+border: solid #00ffee   0.5px;
+cursor: pointer;
+}
+
+
+.RoutineDetailsLine{
+  height: 95%;
+  width: 2px;
+  background-color: #00ffea38;
+  border-radius: 1rem;
+  align-self:flex-start ;
+}
+
+
+
+.RightSIdeOf-line{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+width: 50%;
+height:100%;
+}
+
+.ColorTitle{
+  display: flex;
+  width: 80%;
+  height: fit-content;
+  gap: 4%;
+  align-items: center;
+  padding-left: 3%;
+  color: #fff;
+}
+
+.ColorTitle{
+  line-height: 0;
+}
+
+
+.ColorsContainer{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.ColorHolder{
+display: flex;
+   width: 12%;
+   height: 80%;
+   justify-content: center;
+   align-items: center;
+   border: solid 2px transparent;
+   border-radius: 1.5rem;
+   background-color: transparent;
+ 
+}
+
+
+.Blue,.DarkBlue,.Pink,.Green,.Yellow,.Orange{
+   width: 80%;
+   height: 80%;
+   border-radius: 2rem;
+   border: none;
+}
+
+
+.Blue{
+   background-color: #00c8ff;
+}
+
+
+.DarkBlue{
+   background-color: #0a1372;
+}
+
+
+.Yellow{
+   background-color: #b7ff00;
+}
+
+
+.Pink{
+   background-color: #fb00ff;
+}
+
+
+.Green{
+   background-color: #09ffa5;
+}
+
+
+.Orange{
+   background-color: #ff9900;
+}
+
+
+.RepeatDaysContainer{
+   display: flex;
+   flex-direction: column;
+    width: 100%;
+    height: 46%;
+    gap: 2%;
+    padding-left: 2%;
+
+}
+
+
+.RepeatText1{
+  color: #fff;
+line-height: 0;
+}
+
+
+
+
+.RepeatText2{
+  color: #fff;
+margin-top: 0;
+}
+
+.RepeatDaysContainer  i{
+  color: #fff;
+}
+
+
+
+
+.RepeatTittle{
+  display: flex;
+  width: 35%;
+  padding-left: 0.5rem;
+gap: 0.7rem;
+  height: fit-content;
+  align-items: center;
+  
+}
+
+
+
+.RepeatDaysDiv{
+display: flex;
+width: 97%;
+height: 40%;
+align-items: center;
+justify-content: space-between;
+}
+
+
+.RepeatDaysDiv  div{
+  display: flex;
+  align-items: center;
+  width: 10%;
+  height: 50%;
+  padding: 0.3rem;
+  background-color: #0000002b;
+  border: solid 1px white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.RepeatDaysDiv  div:hover{
+box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.2),
+    0 0 25px rgba(255, 255, 255, 0.5)
+}
+
+
+.RepeatDaysDiv  div.Checked{
+  background-color: #fff;
+}
+
+
+
+.HorizontalLine{
+  width: 90%;
+  height: 2px;
+  background-color: #00ffea5e;
+  align-self: center;
+}
+
+
+.RoutineDuration{
+  position: relative;
+  display: flex;
+width: 100%;
+height: 20%;
+justify-content: space-around;
+}
+
+.DurationSeparationLines{
+  height: 2px;
+  width:90%;
+  background-color: #00ffea38;
+  border-radius: 1rem;
+  align-self:center ;
+}
+
+
+
+.StartLineSelectDiv{
+  position: absolute;
+  display: flex;
+  width: 8rem;
+  height: 10rem;
+overflow: hidden;
+  top: 3rem;
+right: 66%;  
+  background-color: #ffffff69;
+  border-radius: 0.5rem;
+  border: 1px white solid;
+  opacity: 0;
+pointer-events: none;
+
+}
+
+.StartLineSelectDiv.ToggleStartLineSelect{
+
+opacity: 1;
+pointer-events: all;
+
+}
+
+
+
+
+
+.HoursSide{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+  overflow-x: hidden;
+gap: 0.5rem;
+  padding-top:0.5rem ;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* Old Edge/IE */
+}
+
+
+.HoursSide div:hover{
+  
+  background-color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+
+.HoursSide div{
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+
+
+
+.MinutesSide{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+gap: 0.5rem;
+    overflow-x: hidden;
+padding-top:0.5rem ;
+border-left: 2px  solid  rgba(255, 255, 255, 0.353);
+  scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* Old Edge/IE */
+}
+
+.MinutesSide div{
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.MinutesSide div:hover{
+  
+  background-color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+
+
+
+.DeadLineSelectDiv{
+  position: absolute;
+  display: flex;
+  width: 8rem;
+  height: 10rem;
+overflow: hidden;
+  top: 3rem;
+right: 31%;
+  background-color: #ffffff69;
+  border-radius: 0.5rem;
+  border: 1px white solid;
+opacity: 0;
+pointer-events: none;
+
+}
+
+
+
+.DeadLineSelectDiv.ToggleDeadLineSelect{
+
+opacity: 1;
+pointer-events: all;
+
+}
+
+
+
+
+
+
+
+
+.HoursSide2{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+  overflow-x: hidden;
+gap: 0.5rem;
+  padding-top:0.5rem ;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* Old Edge/IE */
+}
+
+
+.HoursSide2 div:hover{
+  
+  background-color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+
+.HoursSide2 div{
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+
+
+
+.MinutesSide2{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+gap: 0.5rem;
+    overflow-x: hidden;
+padding-top:0.5rem ;
+border-left: 2px  solid  rgba(255, 255, 255, 0.353);
+  scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* Old Edge/IE */
+}
+
+.MinutesSide2 div{
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.MinutesSide2 div:hover{
+  
+  background-color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+
+
+
+.StartTimeDiv{
+  display: flex;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.StartTimeDiv  p{
+  color: #fff;
+}
+
+
+
+.RoutineTime{
+  display: flex;
+align-items: center;
+justify-content: space-around;
+width: 10rem;
+height: 2rem;
+border-radius: 0.5rem;
+outline: none;
+border:1px solid rgba(255,255,255,.18);
+ background:linear-gradient(
+        135deg,
+        rgba(73, 170, 179, 0.421),
+        rgba(29, 146, 152, 0.33)
+    );
+
+  
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.25),
+        inset 0 -1px 0 rgba(255,255,255,.05),
+        0 8px 25px rgba(0,0,0,.25);
+        cursor: pointer;
+}
+
+
+.HoursMinutes{
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  
+}
+
+
+.fa-solid.fa-clock{
+  color: #fff;
+}
+
+
+
+
+
+.Hours{
+ 
+
+  width:15%;
+  height:fit-content;
+  border: rgb(66, 194, 237) 1px solid;
+outline: none;
+border-radius: 0.3rem;
+
+}
+
+
+.ColumnDOts{
+  padding-left:3% ;
+    padding-right:3% ;
+
+  font-size: x-large;
+  font-weight: 700;
+}
+
+
+.Minutes{
+
+  width: 15%;
+  height: fit-content;
+border: rgb(66, 194, 237) 1px solid;
+outline: none;
+border-radius: 0.3rem;
+
+}
+
+.Minutes[type="number"]::-webkit-outer-spin-button,
+.Minutes[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Hours,[type="number"]::-webkit-outer-spin-button,
+.Hours[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+.EndTimeDiv{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+
+}
+
+.EndTimeDiv  p{
+  color: #fff;
+}
+
+
+
+
+.Duration{
+  display: flex;
+  width: 25%;
+  height: 70%;
+  border-radius: 0.5rem;
+  align-self: center;
+  justify-content: space-between;
+  background-color: #00c8ff;
+
+}
+
+
+.ClockDiv{
+  display: flex;
+  width: 20%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.ClockDiv i{
+font-size: larger;
+  
+}
+
+.DurationTime{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+
+
+
+.DurationTime p{
+  line-height: 0;
+}
+
+.Duration-hours-minHolder{
+  display: flex;
+  width: 90%;
+  height: 60%;
+}
+
+.Duration-hours-minHolder div{
+font-size: x-large;
+}
+
+
+
+.MoreDetails{
+display: flex;
+width: 100%;
+height: 20%;
+justify-content:space-between ;
+}
+
+
+
+.RoutineNoteTexts{
+  display: flex;
+  flex-direction: column;
+  width:40%;
+height: 100%;
+padding-left: 2%;
+}
+
+
+.RoutineNoteTexts h2{
+line-height: 0;
+color: #fff;
+}
+
+
+.RoutineNoteTexts p{
+margin-top: 0;
+color: #fff;
+
+}
+
+
+.RoutineNoteDiv{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  
+}
+
+.RoutineNote{
+display: flex;
+width: 95%;
+height: 70%;
+flex-direction: column;
+border:  1px solid rgb(0, 255, 255) ;
+outline: none;
+resize: none;
+font-size: larger;
+border-radius: 0.5rem;
+background-color: #00d5ff;
+  color: #2a008c;
+font-family: "Inter", sans-serif;
+}
+
+
+.RoutineNoteDiv p{
+  line-height: 0;
+  font-size: larger;
+  color: #fff;
+}
+
+
+
+.RoutineButtons-div{
+  display: flex;
+width: 50%;
+height: 10%;
+align-self: flex-end;
+align-items: center;
+justify-content: space-around;
+}
+
+.RoutineButtons-div button{
+  width: 40%;
+  height: 60%;
+  border-radius: 0.5rem;
+  border: 1px rgb(0, 179, 255) solid;
+    font-size: medium;
+
+  cursor: pointer;
+
+}
+
+.CreateRoutine{
+background-color:  rgb(80, 221, 237);
+
+}
+
+.CreateRoutine:hover{
+  box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.2),
+    0 0 25px rgba(255, 255, 255, 0.5)
+}
+
+
+.CancelRoutine:hover{
+    box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.2),
+    0 0 25px rgba(255, 255, 255, 0.5)
+}
+
+
+
+
+.the-holder-of-leftRightMiddle{
+  position: relative;
+display: flex;
+gap: 0.4rem;
+width:100%;
+min-height: 0;
+justify-content: center;
+
+
+}
+
+
+
+
+
+.MiddleSide{
+display: flex;
+     flex-direction: column;
+     width: 80%;
+     min-height: 0;
+     flex: 0 0 auto;
+     overflow: hidden;
+     border-radius: 1rem;
+       
+background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.02)
+        );
+
+   
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+
+
+
+.Monday,.Tuesday,.Wednesday,.Thursday,.Friday,.Saturday,.Sunday{
+    display: flex;
+ 
+justify-content: center;
+align-items:center ;
+border: solid 0.5px rgba(0, 0, 0, 0.178);
+color: rgba(87, 200, 228, 0.841);
+font-size: large;
+font-family: 'Poppins',system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 600;
+}
+
+
+
+
+/*.DayNumber{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 30%;
+  border-radius: 1rem;
+padding: 4%;
+  background-color: #00ffff;
+}*/
+
+
+
+
+
+
+.Routine-tasks-holder{
+  display: flex;
+  width: 100%;
+  height: 100rem;
+}
+
+.timeColumns-Container{
+ 
+display: grid;
+grid-template-columns:100% ;
+grid-template-rows:repeat(25,4rem) ;
+  width: 8%;
+min-height:0;
+flex: 0  0 auto;
+
+}
+
+
+.timeColumns-Container div{
+
+display: flex;
+width: 100%;
+
+justify-content: center;
+align-items: center;
+color: rgba(87, 200, 228, 0.8);
+
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+}
+
+.RoutinesGrid{
+  display: grid;
+  grid-template-rows:repeat(1,4rem); 
+  grid-template-columns:repeat(7,1fr) ;
+  width:100%;
+  height:fit-content;
+
+}
+
+
+.RoutinesGrid div{
+display: flex;
+flex-direction: column;
+border: 1px solid rgba(255,255,255,0.18);
+
+
+  overflow-wrap: break-word; /* breaks long words if they don't fit */
+  /* or, more aggressive: */
+  word-break: break-all;   
+}
+
+
+
+.Routine-and-days{
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+min-height: 0;
+flex: 0 0 auto;
+}
+
+
+.ColumnsOfRoutines{
+  position: relative;
+  display: flex;
+  width: 100%;
+min-height: 0;
+flex: 0 0 auto;
+}
+
+
+.RoutineColumn-Monday{
+  position: relative;
+display: grid;
+grid-template-columns:100% ;
+grid-template-rows:repeat(24,3rem) ;
+  width: 100%;
+min-height: 0;
+justify-items: center;
+padding-top: 3.9rem;
+gap: 1rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  
+}
+
+
+.daySeparationLine{
+
+  width: 80%;
+  height: 0;
+    
+border: 1px solid rgba(255,255,255,0.18);
+}
+
+
+
+.RoutineDiv{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width:min(90%,11rem);
+
+
+  border-radius: 0.5rem;
+
+}
+
+.RoutineName{
+  padding-top: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  
+  
+}
+
+.RName-and-CategoryDiv{
+  display: flex;
+  width: 90%;
+  height: 2rem;
+  gap:0.2rem;
+}
+
+
+.ThreeDotsOfRoutine{
+  
+  align-self: center;
+
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+     
+}
+
+.ThreeDotsOfRoutine:hover{
+  
+    background-color: rgba(0, 0, 0, 0.189);
+}
+
+
+.RNam-and-CategoryDiv-and-Dots{
+display: flex;
+width: 100%;
+height:2rem ;
+}
+
+
+
+.RCategoryEmogy{
+  display: flex;
+  width: 20%;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  background-color: #474d484e;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.RCategoryEmogy i{
+  display: flex;
+  width:fit-content;
+  height: fit-content;
+  
+  font-size: larger;
+}
+
+
+
+
+
+
+.TimeDiv{
+  display: flex;
+  width:100% ;
+   height: fit-content;
+   justify-content: center;
+gap: clamp(0.1rem,2vw,0.3rem);
+   align-items: center;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.StartingDiv{
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+}
+
+
+.EndingDiv{
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.StartingTimeHourP{
+
+   font-size: small;
+
+margin-top: 0;
+margin-bottom:0 ;
+}
+
+
+.StartingTimeMinP{
+
+   font-size: small;
+margin-top: 0;
+margin-bottom:0 ;
+
+}
+
+.EndingTimeHourP{
+line-height: 0;
+   font-size: small;
+margin-top: 0;
+margin-bottom:0 ;
+
+}
+
+.EndingTimeMinP{
+
+   font-size: small;
+
+margin-top: 0;
+margin-bottom:0 ;
+}
+
+
+.SeparationTimeDots,.SeparationTimeDots2{
+  font-weight: 600;
+  height: fit-content;
+}
+
+
+.SeparationTimeDots1,.SeparationTimeDots2{
+  font-weight: 600;
+  height: fit-content;
+}
+
+
+.TimeLine{
+  width: 10%;
+  height: 0.5px;
+  background-color: rgba(0, 0, 0, 0.652);
+}
+
+
+
+
+.RoutineOptions{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 5rem;
+  height: 7rem;
+
+  background-color:rgb(23, 209, 209) ;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 9;
+opacity: 0;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+
+
+
+.DeleteOption{
+  position: absolute;
+  height: fit-content;
+  align-self: self-end;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+  transition: 0.5s ease;
+}
+
+
+
+
+
+.RoutineOptions.hideOption{
+animation:HideOptions 0.2s linear forwards ;
+}
+
+.RoutineOptions.AppearOptions{
+animation:AppearOptions 0.2s linear forwards ;
+
+}
+
+
+
+@keyframes HideOptions{
+  from{
+    opacity: 1;
+  }
+
+    to{
+    opacity: 0;
+      pointer-events: none;
+
+  }
+
+}
+
+
+
+@keyframes AppearOptions{
+  from{
+    opacity: 0;
+  }
+
+    to{
+    opacity: 1;
+      pointer-events: all;
+
+  }
+
+}
+
+
+
+.RoutineOptions button{
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+ border: none;
+padding-top:0.2rem ;
+padding-bottom:0.2rem ;
+border-radius: 0.3rem;
+}
+
+.DeleteRoutine{
+
+  background-color: rgba(255, 0, 0, 0.323);
+  
+}
+
+
+.DeleteRoutine:hover i{
+
+ color: rgb(255, 0, 0);
+  font-size: large;
+}
+
+
+
+.ModifyRoutine{
+background-color: #001aff64;
+  
+}
+
+.ModifyRoutine:hover i{
+
+  color: #001aff;
+  font-size: large;
+}
+
+
+
+.ModifyRoutine i{
+font-size: smaller ;
+
+}
+
+
+.DoneRoutine{
+
+  background-color:rgba(0, 128, 0, 0.346) ;
+}
+
+
+.DoneRoutine:hover i{
+color: rgb(0, 255, 0);
+font-size: large;
+}
+
+
+
+
+.RightSide{
+display: flex;
+     flex-direction: column;
+     align-items: center;
+     flex: 0 0 16%;
+     min-height: 0;
+     justify-self: flex-end;
+     padding-top: 0.5rem;
+   gap: 0.5rem;
+     border-radius: 1rem;
+     background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.03)
+        );
+
+
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+  
+}
+
+
+.Overview{
+
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+ height: 20rem;
+ flex:0 0 auto;
+  border-radius:1rem;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(0,255,255,.10),
+            rgba(255,255,255,.04)
+        );
+
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.18);
+
+
+}
+
+
+.Routine-Category-Stat{
+
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+ height: 20rem;
+ flex:0 0 auto;
+      border-radius:1rem;
+  justify-content: space-evenly;
+    background:
+        linear-gradient(
+            160deg,
+            rgba(0,255,255,.10),
+            rgba(255,255,255,.04)
+        );
+
+    
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.18);
+
+
+}
+
+
+.RoutineCategory-Title{
+  display: flex;
+  width: 0 0 auto;
+  height: fit-content;
+  padding-left: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.15) ;
+
+}
+
+
+.RoutineCategory-Title p{
+  color: #00eeffb1;
+  font-weight: 600;
+  font-size: large;
+}
+
+
+.CategoryDiv{
+  display: flex;
+  width: 0 0 auto;
+  height:2rem;
+  justify-content: space-around;
+   align-items: center;
+}
+
+
+
+.DotCategory{
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #00ff26;
+  border-radius: 1rem;
+}
+
+
+
+
+
+
+
+.HolderOf-Dot-andCategory{
+  display: flex;
+  align-items: center;
+  width: 14rem;
+  gap:3%;
+  height: fit-content;
+}
+
+
+
+
+.CategoryPray{
+color: White;
+}
+
+.CategoryHealth{
+color: rgb(1, 255, 1);
+}
+
+.CategorySports{
+color: orange;
+}
+
+.CategoryStudy{
+color: #001aff;
+}
+
+.CategoryPersonal{
+color: #00c8ff;
+}
+
+.CategoryWork{
+  color:Pink ;
+
+}
+
+.CategoryOthers{
+color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.StatisticsOfDailly{
+
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 20rem;
+flex:0 0 auto;
+   border-radius:1rem;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(0,255,255,.10),
+            rgba(255,255,255,.04)
+        );
+
+
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.18);
+
+}
+
