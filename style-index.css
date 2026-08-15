@@ -178,15 +178,32 @@ top: 3%;
     
 }
 
+.Header-Get-Started .lock{
+    top: 3%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    font-size: x-large;
+}
+
+
+
 .Header-Get-Started:hover .lock{
-font-size: 2rem;
+font-size: 1.5rem;
 }
 
 .Log-in:hover .lock{
-font-size: 2rem;
+font-size: 1.5rem;
 }
 
 
+.Log-in .lock{
+    top: 3%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    font-size: x-large;
+}
 
 
 

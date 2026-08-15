@@ -302,7 +302,7 @@ margin-top: 0;
   height: 95%;
 left:30vw;
   top: 43%;
-background-color:#3eb6ddc4;
+background-color:#3eb5dd;
 border: solid 1px rgb(0, 247, 255);
 border-radius: 1rem;
 overflow: hidden;
@@ -901,6 +901,7 @@ justify-content: space-between;
   border: solid 1px white;
   border-radius: 0.5rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .RepeatDaysDiv  div:hover{
@@ -1354,7 +1355,7 @@ font-size: larger;
 border-radius: 0.5rem;
 background-color: #00d5ff;
   color: #2a008c;
-font-family: "Inter", sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 
 

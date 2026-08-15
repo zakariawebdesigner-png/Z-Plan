@@ -2146,9 +2146,11 @@ background: linear-gradient(
 );
 transform: scale(1.1);
 color: white;
-border: 1px solid rgb(18, 197, 217);
+border: none;
 cursor: pointer;
-
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
 }
 
@@ -2162,8 +2164,11 @@ background: linear-gradient(
 );transform: scale(1.1);
 color: white;
 cursor: pointer;
-border: 1px solid rgb(18, 197, 217);
+border: none;
     
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 
@@ -2172,12 +2177,9 @@ border: 1px solid rgb(18, 197, 217);
 .delete:hover{
 
 background-color: #349dc1;
-transform: scale(1.1);
+transform: scale(1.2);
 color: #00ffff;
 
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 
@@ -2187,12 +2189,10 @@ color: #00ffff;
 
 
 background-color: #1adbd8;
-transform: scale(1.1);
+transform: scale(1.2);
 color: #00ffff;
 
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
 }
 
 
