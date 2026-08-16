@@ -74,6 +74,40 @@ main{
 
 
 
+body{
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
+width: 100%;
+
+min-height: 100vh;
+margin-left: 0;
+margin-bottom: 0;
+scroll-behavior: smooth  ;
+overflow-y:auto;
+  background:
+        radial-gradient(
+            circle at top left,
+            rgba(95, 134, 213, 0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(85, 185, 200, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #4251a3 0%,
+            #5762b8 50%,
+            #424a85 100%
+        );
+
+}
+
+
+
+
 body.lightMode{
 display: flex;
 flex-direction: column;
@@ -104,6 +138,12 @@ overflow-y:auto;
         );
 
 }
+
+
+
+
+
+
 
 body.darkMode{
   display: flex;

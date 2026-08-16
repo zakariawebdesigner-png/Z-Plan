@@ -256,6 +256,7 @@ RoutineOptions.addEventListener("click",(e)=>{
         });
 
     }
+    
 
     else if(e.target.closest(".ModifyRoutine")){
                            

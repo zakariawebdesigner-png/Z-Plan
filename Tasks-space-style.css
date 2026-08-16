@@ -7,6 +7,40 @@ font-family: 'Poppins',sans-serif;
 
 
 
+body{
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
+width: 100%;
+min-height: 100vh;
+margin-left: 0;
+margin-bottom: 0;
+scroll-behavior: smooth  ;
+overflow-y:auto;
+  background:
+        radial-gradient(
+            circle at top left,
+            rgba(52,120,255,0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(77,232,255,0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #4a548a 0%,
+            #182691 50%,
+            #03138a 100%
+        );
+
+}
+
+
+
+
+
 body.lightMode{
 display: flex;
 flex-direction: column;
