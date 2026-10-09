@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+        <link href="Tasks-space-style.css" rel="stylesheet"  >
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     
     
     
     
-    <link href="Tasks-space-style.css" rel="stylesheet" >
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/png" href="photos/pic15.png">
 <link rel="icon" type="image/png" sizes="32x32" href="photos/pic15.png">
@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" href="photos/profile.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   <title>PlanZ</title>
 </head>
-<body>
+<body class="lightMode">
    
 
       
@@ -46,7 +46,7 @@
 
                     </div>
                      
-                  <i class="fa-solid fa-bell" ></i>
+                  <i class="fa-solid fa-bell"  id="bell" ></i>
       
                  <div class="toolTip-div">
                     <div class="Profile-div">
@@ -412,7 +412,7 @@
                     <div class="sortBy" id="sortBy">
                         <div class="SortText">Sort By</div>
                         <div class="SortSelect-and-arrow" id="SortSelect-and-arrow">
-                               <div class="SortSelect" >Default</div> 
+                               <div class="SortSelect" id="SortSelect" >Default</div> 
                                <i class="fa-solid fa-chevron-down"></i>
                          </div>
                         
@@ -420,7 +420,7 @@
                     
                </div>
              <div class="SortList" id="SortList">
-                <div class="FirstLetterOption option">First letter</div>
+                <div class="FirstLetterOption option"> First letter</div>
                 <div class="PriorityOption   option">By Priority</div>
                 <div class="DefaultOption   option">Default</div>
                  <div class="FirstLetterOption option">Dead Line</div>
@@ -515,7 +515,10 @@
             
             <div class="options-container " id="options-container">
                     <div class="option " id="Personal"   >Personal</div>
+                    <div class="Line"></div>
                        <div class="option" id="Work" >Work</div>
+                            <div class="Line"></div>
+
                         <div class="option" id="Ideas">Ideas</div>
                     </div>
                    
@@ -565,8 +568,8 @@
                  <div class="notes-logo"></div>
             </div>
             
-                <button  >Tasks space</button>
-                 <button>Calender</button>
+                <button onclick="window.scrollTo({behavior:'smooth',top:0})">Tasks space</button>
+                 <button onclick="window.location.href='Dailly-Routine.html'">Calender</button>
                 <button>Settings</button>
            
             
@@ -650,8 +653,8 @@
 
 
 
-<script  src="javascript2.js" ></script>
-<script  src="Notes-part.js" ></script>
+<script type="module"  src="javascript2.js" ></script>
+<script type="module" src="Notes-part.js" ></script>
 </body>
 </html>
 

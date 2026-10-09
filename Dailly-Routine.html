@@ -27,7 +27,7 @@
                         <h1 class="my-todo-text" >My To Do list </h1>
 
                </div>
-           
+          
               <a class="link" href="index.html">Home</a>
 
                   <a class="link" href="tasks-page.html">Tasks space</a>
@@ -56,6 +56,34 @@
               </div>
 
          </div>
+
+         <div class="SettingsBar" id="SettingsBar">
+       <div class="TodoListP-image-of-Settings">
+        <p class="">TodoList</p>
+            <div></div>
+            
+       </div>
+       <div class="line-Settings"></div>
+       <div class="appearenceDiv">
+        <p class="appearenceP">Appearence</p>
+            <div class="appearenceChoices">Dark Mode</div>
+       <div class="appearenceChoices">Light Mode</div>
+    </div>
+       
+       <div class="appearenceDiv">
+          <p class="appearenceP">Appearence</p>
+            <div class="appearenceChoices">Dark Mode</div>
+       <div class="appearenceChoices">Light Mode</div>
+       </div>
+
+           
+       <div class="VoiceDiv">
+          <p class="VoiceP">Appearence</p>
+            <div class="VoiceChoices">Dark Mode</div>
+       <div class="VoiceChoices">Light Mode</div>
+       </div>
+</div>
+ 
 
       
 <div id="RoutineForm" class="RoutineForm">
@@ -424,7 +452,44 @@
         </div>
 
    
+
+
+
+
+
+    <div id="Profile-settingsPart" class="Profile-settingsPart">
+      
+        <div id="ProfileSettings-arrow"  class="ProfileSettings-arrow"></div>
+     <div class="ProfileSettingsTitle" id="ProfileSettingsTitle"  >Profile</div>
+     <div class="Quick-EditsDiv">
+         <button id="Profile" class="Profile" onclick="window.location.href='Profile.html'">  
+             <i class="fa-solid fa-user-gear"></i>
+             <div>Profile</div> 
+         </button>
+
+             <div id="Quick-Edits" class="Quick-Edits">  
+                  <i class="fa fa-edit"></i>
+                  <div >Quick Edits</div>
+             </div>
+
+     </div>
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 <main>
+
+
+    
 
 
                     <!--This  is the div responsible of  blurring the whole site -->
@@ -487,7 +552,7 @@
                                               <div>21:00</div>
                                              <div>22:00</div>
                                      <div>23:00</div>
-                                           <div>00:00</div>
+                                           <div  style="border: none;" >00:00</div>
                                         
                                      </div>
 
@@ -503,7 +568,7 @@
                  
                                                     
                                        </div>
-                                       <div class="ColumnsOfRoutines">
+                                       <div class="ColumnsOfRoutines" id="ColumnsOfRoutines">
 
                                                 
                            <div class="RoutineOptions" id="RoutineOptions">
@@ -547,7 +612,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                      
                                        </div>
                                          <div id="RoutineColumn-Tuesday"  class="RoutineColumn-Monday">
                                              <div class="daySeparationLine"></div>
@@ -573,7 +638,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                        
                                        </div>
                                          <div id="RoutineColumn-Wednesday"   class="RoutineColumn-Monday">
                                             
@@ -600,7 +665,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                      
                                        </div>
                                          <div id="RoutineColumn-Thursday"  class="RoutineColumn-Monday">
                                                  <div class="daySeparationLine"></div>
@@ -626,7 +691,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                   
                                        </div>
                                          <div id="RoutineColumn-Friday"    class="RoutineColumn-Monday">
                                                 <div class="daySeparationLine"></div>
@@ -652,7 +717,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                        
                                        </div>
                                          <div id="RoutineColumn-Saturday"   class="RoutineColumn-Monday">
                                             <div class="daySeparationLine"></div>
@@ -678,7 +743,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                    
                                        </div>
                                          <div id="RoutineColumn-Sunday"   class="RoutineColumn-Monday">
                                                  <div class="daySeparationLine"></div>
@@ -704,7 +769,7 @@
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
                                                         <div class="daySeparationLine"></div>
-                                                        <div class="daySeparationLine"></div>
+                                                      
                                        </div>
                                     </div>
                                        
@@ -819,7 +884,8 @@
 
 
 
-<script type="module"  src="Main.js" ></script>
+<script type="module"  src="Dailly-Page-Folder/Javascript/Main.js" ></script>
+
 
 </body>
 </html>

@@ -1,43 +1,10 @@
+
+
 html{
 font-size: 16px;
 font-family: 'Poppins',sans-serif;
 
 }
-
-
-
-
-body{
-display: flex;
-flex-direction: column;
-overflow-x: hidden;
-width: 100%;
-min-height: 100vh;
-margin-left: 0;
-margin-bottom: 0;
-scroll-behavior: smooth  ;
-overflow-y:auto;
-  background:
-        radial-gradient(
-            circle at top left,
-            rgba(52,120,255,0.15),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at top right,
-            rgba(77,232,255,0.08),
-            transparent 30%
-        ),
-        linear-gradient(
-            180deg,
-            #4a548a 0%,
-            #182691 50%,
-            #03138a 100%
-        );
-
-}
-
-
 
 
 
@@ -216,8 +183,6 @@ opacity: 1;
 
 
 .delete-alert4{
-
-
 height:100%;
  width: 2.2rem;
 font-size: xx-large;
@@ -241,6 +206,9 @@ font-weight: 700;
   height: 43%;
 
 }
+
+
+
 .containersText-and-deleteBtn{
 
 display: flex;
@@ -1803,7 +1771,7 @@ position: absolute;
 left: 80%;
 top:10%;
 justify-content: space-around;
-
+padding-bottom: 0.5rem;
 border-radius: 0.4rem;
 width: 19%;
 height: 25%;
@@ -1822,7 +1790,7 @@ pointer-events: none;
   height: fit-content;
   border-radius: 0.2rem;
   user-select: none;
-
+color: #0e0235;
 cursor: pointer;
   font-family: 'Poppins',sans-serif;
   padding: 2%;
@@ -1974,7 +1942,7 @@ padding-left: 2%;
     rgba(255,255,255,.16),
     rgba(255,255,255,.08)
   );
-  border: 1px solid rgba(255,255,255,.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
@@ -2204,8 +2172,6 @@ border: none;
     0 8px 32px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-
-
 
 
 .delete:hover{
@@ -2804,7 +2770,7 @@ background:
 
 .arrow-pic{
   position: absolute;
-  background-image: url(photos/arrow3.png);
+  background-image: url(photos/Arrow.png);
    background-size: cover;
    width: 4.5rem;
    height: 4.5rem;
@@ -3030,7 +2996,7 @@ z-index: 101;
 pointer-events: none;
 opacity: 0;
 
-background-color:#27347b39;
+background-color:#0b1864;
 border: solid 1px blue;
 transform: translateY(-6vh);
 
@@ -3183,11 +3149,14 @@ font-size: larger;
 outline: none;
 border: none;
 background-color: transparent;
-color: #4de8ff;
+color: #4de7ffc0;
 border: solid 2px rgb(0, 119, 255);
 padding-left: 0.2rem;
 
 }
+
+
+
 
 .note-nameP{
 height: max-content;
@@ -3196,16 +3165,19 @@ font-family: 'Poppins',sans-serif ;
 font-weight: 500;
 font-size: larger;
 user-select: none;
-color: #4de8ff;
+color: #4de7ffe4;
 text-shadow: 0 0 3px rgba(77, 232, 255, 0.5);
 }
+
+
+
 .DurationP{
 height: max-content;
 margin-bottom: 0;
 font-family: 'Poppins',sans-serif ;
 font-weight: 500;
 font-size: larger;
-color: #4de8ff;
+color: #4de7ffe4;
 text-shadow: 0 0 3px rgba(77, 232, 255, 0.5);
 }
 
@@ -3216,7 +3188,7 @@ margin-bottom: 0;
 font-family: 'Poppins',sans-serif ;
 font-weight: 500;
 font-size: larger;
-color: #4de8ff;
+color: #4de7ffe4;
 text-shadow: 0 0 3px rgba(77, 232, 255, 0.5);
 }
 
@@ -3227,13 +3199,13 @@ align-items: center;
 width: 16rem;
 height: 2rem;
 border-radius: 0.3rem;
-color: #4de8ff;
+color: #4de7ffe4;
 cursor: pointer;
 font-family:'Poppins',sans-serif ;
 border: none;
 padding-left: 0.2rem;
 user-select: none;
-background-color: #27347b73;
+background-color: #0b154f73;
 border: solid 1px blue;
 }
 
@@ -3246,24 +3218,45 @@ border: solid 1px blue;
 position: absolute;
 display: flex;
 flex-direction: column;
-gap: 0.1rem;
+
 width: 14rem;
 height: 5rem;
 
 border-radius: 0.5rem;
-padding: 0.5rem;
-top: 82%;
+padding-top: 0.2rem;
+padding-bottom: 0.5rem;
+padding-right: 0.3rem;
+padding-left: 0.2rem;
+top: 85%;
 display: none;
-
+background-color:#0b154f ;
 backdrop-filter: blur(5px);
 border: solid 1px blue;
 
 }
 
+
+
+
+.Line{
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0;
+  display: flex;
+width: 100%;
+height: 2px;
+border-radius: 1rem;
+background-color:#4de7ff1f ;
+flex-shrink: 0;
+}
+
+
+
 .option{
 
  padding: 0.3rem;
  font-family: 'Poppins',sans-serif;
+ color: #4de7ffe8;
 }
 
 
@@ -3273,6 +3266,7 @@ border: solid 1px blue;
  cursor: pointer;
  transform: scale(1.1);
  border-radius: 0.3rem;
+ color: #000000;
 }
 
 #options-container.show{
@@ -4850,6 +4844,9 @@ input:-webkit-autofill:focus{
   animation-duration: 1s;
   animation-timing-function: ease;
 
+
+  
+
 }
 
 
@@ -4885,4 +4882,5 @@ main{
    translate:100vw;
   }
 }
+
 

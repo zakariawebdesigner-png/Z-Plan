@@ -4,6 +4,20 @@ html{
  
 }
 
+
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
 body{
 display: flex;
 flex-direction: column;
@@ -11,11 +25,16 @@ flex-direction: column;
 justify-content: center;
 margin: 0;
     width: 100%;
-    gap: 1rem;
     min-height:100vh ;
     overflow-x: hidden;
-    background-color: rgb(98, 162, 222);
-    font-family: 'Poppins',sans-serif;
+    gap: 1rem;
+background: linear-gradient(
+    rgb(147, 51, 234),
+    rgb(17, 5, 38),
+    rgb(50, 15, 98),
+    rgb(1, 0, 2)
+);  
+  font-family: 'Poppins',sans-serif;
 
 }
   
@@ -29,6 +48,7 @@ align-self: center;
 margin-top: 0;
 align-items: center;
 justify-content: space-between;
+
 }
 
 
@@ -152,8 +172,8 @@ cursor: pointer;
 .Log-in{
     position: relative;
     background-color: transparent;
-color: #2b51ea;
-border: 1px solid #5342ef;
+color: #64c5ef;
+border: 1px solid #427cef;
 }
 
 .Header-Get-Started{
@@ -169,6 +189,8 @@ border: 1px solid #5342ef;
 }
 
 
+
+
 .lock{
 top: 3%;
     transform: translateX(-50%);
@@ -178,100 +200,122 @@ top: 3%;
     
 }
 
-.Header-Get-Started .lock{
-    top: 3%;
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    font-size: x-large;
-}
-
-
-
-.Header-Get-Started:hover .lock{
-font-size: 1.5rem;
-}
-
-.Log-in:hover .lock{
-font-size: 1.5rem;
-}
-
-
-.Log-in .lock{
-    top: 3%;
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    font-size: x-large;
-}
-
-
 
 
 .cta-container{
 
 display: flex;
-flex-direction: row;
 align-self: center;
-width:95%;
-height: 37rem;
-border-radius: 1.5rem;
-background: linear-gradient(
-    135deg,
-    #050816,
-    #0B1026,
-    #121A3D
-);
-
-}
-
-
-
-
-.left-side{
-
-display: flex;
-flex-direction:column;
-width: 50%;
-height: 100%;
+flex-direction: column;
 align-items: center;
-
-gap: 1rem;
-
-border-top-left-radius: 1.5rem;
+gap: 0.5rem;
+width:85%;
+height: 40rem;
+background-image: url(photos/Land.jpeg);
+background-size: cover;
+ 
+box-shadow: 0 0px 46px rgb(0, 0, 0);
+    border-top-color: #81f7ff ;
+    border-bottom-color:#81f7ff ;
+ border: 1px outset black;
+    border-radius: 1.5rem;
+    transition: 1s;
 }
 
-.right-side{
 
-display: flex;
-flex-direction:column;
-width: 50%;
-height: 100%;
-justify-content: center;
-border-top-right-radius: 1.5rem;
+
+.Cursor{
+
+position: absolute;
+width: 15rem;
+height: 15rem;
+left: 0;
+z-index: 3;
+top: 15%;
+transform: translateX(-10%);
+background-image: url(photos/Cursor.webp);
+background-size: cover;
+
+transform: translateY(0.5vw);
+    filter: drop-shadow(0 15px 10px rgb(255, 255, 255));
+        animation: float 2s linear infinite ;
 
 }
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+
+.Rocket{
+
+position: absolute;
+right: 0%;
+top: 37%;
+width: 15rem;
+height: 15rem;
+transform: translateX(20%);
+background-image: url(photos/Rocket.webp);
+background-size: cover;
+filter: drop-shadow(0 15px 10px rgb(234, 223, 223));
+transform: translateY(0.5vw);
+        animation: float 2s linear infinite ;
+        animation-delay: 0.2s;
+
+}
+
+
 
 
 
 .p1-and-p2-container-parent{
-
+position: relative;
 display: flex;
 flex-direction:column;
 gap: 1.5rem;
-width: 32rem;
+width: fit-content;
 height: fit-content;
-padding-left:1rem;
+align-items: center;
+padding-left:7rem;
+padding-bottom:1.3rem;
 margin-bottom: 0;
+gap: 0.1rem;
 margin-top: 3rem;
 
+
 }
+
+
+.p1-Holder{
+    display: flex;
+   
+   width:95%;
+
+   align-items: center;
+    height: fit-content;
+    max-height: 3rem;
+    
+}
+
+
 
 
 .p1{
 color: white;
 font-size: 0.9rem;
-margin-bottom: 0;
+
 border-radius:0.28rem;
 width: fit-content;
 padding-left: 0.5rem;
@@ -279,13 +323,7 @@ padding-right: 0.5rem;
 padding-top: 0.3rem;
 padding-bottom: 0.3rem;
 
-background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.432),
-        rgba(76,96,184,0.45),
-        rgba(49, 64, 131, 0.7)
-
-);
+background:linear-gradient(90deg,#c062fe,rgb(96, 6, 156)) ;
   box-shadow:
         0 0 18px rgba(76,96,184,0.2),
         inset 0 0 10px rgba(255,255,255,0.04);
@@ -316,24 +354,27 @@ to{
 
 .p2-container{
 display: flex;
-width: 32rem;
-height:11rem;
+width: fit-content;
+max-width:45rem;
+height:fit-content;
 
+gap: 0;
 padding: 0;
-
 }
 
 .p2{
-color: white;
-font-size: 4.3rem;
+font-size: 8rem;
 font-weight: 700;
 margin-top: 0;
-color: #6d8dff;
+margin-bottom: 0;
+
+line-height:100%;
+color: #8045ff;
 transform:translateX(-70vw);
 animation: move-p2 0.7s ease forwards ;
    animation-delay:0.3s ;
-
-
+transition: 1s;
+z-index: 2;
 }
 
 
@@ -357,16 +398,19 @@ to{
 .p3-div{
 
 display: flex;
-width: 27rem;
+width: 40rem;
 height: fit-content;
 margin-top: 0;
+margin-bottom: 0;
 
+flex-wrap: wrap;
 }
 
 
 
 
 .p3{
+    text-align: center;
     margin-top: 0;
 color: white;
 transform:translateX(-70vw);
@@ -390,6 +434,9 @@ to{
 
 }
 
+
+
+
 .Get-Started{
 
 width: fit-content;
@@ -400,26 +447,22 @@ padding-right:1.8rem ;
 padding-left: 1.8rem;
 font-size: larger;
 font-weight: 600;
-border-radius: 0.7rem;
-margin-top: 1rem;
+border-radius: 1rem;
+margin-top: 0;
 cursor: pointer;
 text-decoration: none;
 opacity: 0;
-background: linear-gradient(
-    135deg,
-    #6a8cff,
-    #4a6cff,
-    #3558e6
-);
-border: 1px  outset rgba(255, 255, 0, 0.543);
+background-color: rgb(200, 115, 249);
+   
+color: #120d6f;
+border: 1px  outset rgb(233, 143, 255);
 
-transform:translateY(20vw);
+transform:translateY(4vw);
  animation:move-button 0.7s ease forwards;
-
+transition: 1s;
    animation-delay:0.5s ;
-
+z-index: 4;
 }
-
 
 
 
@@ -428,7 +471,7 @@ transform:translateY(20vw);
 
 from{
     opacity: 0;
-        transform:translateY(20vw);
+        transform:translateY(4vw);
 
 }
 to{
@@ -444,13 +487,30 @@ opacity: 1;
 .Get-Started:hover{
 
 
-background: linear-gradient(125deg,#d5db66,#d0d658,#575a1c,#232506);
-
-
+background: linear-gradient(rgb(96, 96, 234),rgb(42, 42, 144));
+color: #6bdcfe;
+box-shadow: 0 0 20px white;
 }
 
 
-.image{
+
+.cta-container:has(.Get-Started:hover){
+box-shadow: 0 0px 46px rgb(255, 254, 254);
+}
+
+
+
+.cta-container:has(.Get-Started:hover) .Cursor{
+
+
+top: 118%;
+left: 52%;
+transition: 1s linear ;
+z-index: 1;
+}
+
+
+/*.image{
 
 
 background-image: url(photos/background.png);
@@ -463,10 +523,9 @@ padding-top: 2rem;
 transform:translateX(70vw);
 animation:move-pic 0.7s ease forwards;
 
-
    animation-delay:0.2s ;
 
-}
+}*/
 
 @keyframes move-pic{
 
@@ -492,185 +551,3338 @@ p{
 
 
 .Developer{
+    position: relative;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
-    background-image: url(photos/Developer-background.jpg);
-    background-size: cover;
+      min-height: max(800px, 100vh);
+
+   padding-top: 1rem;
+   padding-right: 1rem;
+   box-sizing: border-box;
+   
+}
+
+
+
+.Tittl-Discription{
+    display: flex;
+    flex-direction: column ;
+    width: fit-content;
+    height: fit-content;
+    padding-left:1rem;
+    gap: 0;
+
+    
+}
+
+
+
+
+.WhoIam-WhatIdo{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 1.5rem;
+}
+
+
+.WhatIdo{
+    font-size: medium;
+    color: rgb(89, 248, 139);
+    
+}
+
+
+
+
+
+.WhoIam{
+
+display: flex;
+align-items: center;
+
+width: fit-content;
+gap: 0.5rem;
+height:fit-content;
+background-color: #180d7873;
+padding-top:0.1rem ;
+padding-bottom:0.1rem ;
+padding-left:0.5rem ;
+padding-right:0.5rem ;
+border-radius: 0.8rem;
+margin-bottom: 0;
+border-top: 1px solid rgba(26, 127, 221, 0.999);
+border-bottom: 1px solid rgba(26, 127, 221, 0.999);
+border-left: 2.5px solid rgba(121, 235, 243, 0.728);
+border-right: 1px solid rgba(26, 127, 221, 0.999);
+
+
+}
+
+
+
+
+.WhoIam p{
+font-size: medium;
+margin-top: 0;
+margin-bottom: 0;
+color: white;
+}
+
+
+.WhoIam i{
+
+
+color: rgb(59, 129, 249);
+}
+
+
+
+
+.Title{
+   display: flex;
+   flex-direction: column;
+   width: clamp(20rem,28vw,23rem);
+   height: fit-content;
+   gap: 0;
+
+   align-items: flex-start;
+         margin-top: 0;
+            margin-bottom: 0;
+
+}
+
+
+.Title p{
+   
+    font-size: clamp(2.5rem,4vw,4.5rem);
+    font-weight: 600;
+    line-height: 5rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    
+}
+
+
+
+.DeveloperDiscription{
+    display: flex;
+flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 0;
+    
+    margin-top: 0;
+  
+}
+
+
+
+
+.Buttons{
+    display: flex;
+    width:clamp(10rem,23vw,20rem);
+    justify-content: center;
+    height: fit-content;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+
+
+
+.Buttons button{
+
+border-radius: 0.9rem;
+
+
+cursor: pointer;
+}
+
+
+.PortfolioBtn{
+   border: none;
+    background: linear-gradient(
+  105deg,
+  #2160F9 0%,
+  #5A3FF5 45%,
+  #7A3FF7 100%
+);
+transition: 0.7s ease;
+   padding-bottom:0.5rem ;
+      padding-top:0.5rem  ;
+      box-shadow: 0 1px 10px blue;
+      border: 1px outset rgba(173, 216, 230, 0.623);
+}
+
+
+.PortfolioBtn:hover{
+
+    box-shadow:
+    0 10px 40px rgba(168, 85, 247, 0.25),
+    0 0 50px rgba(56, 189, 248, 0.18),
+    0 0 70px rgba(236, 72, 153, 0.12);
+}
+
+
+
+
+
+
+
+.PortfolioBtn a{
+    display: flex;
+    align-items: center;
+   font-size: medium;
+   text-decoration: none;
+   color: white;
+   gap: 0.5rem;
+    padding-left:1rem;
+   padding-right: 1rem ;
+   
+}
+
+.PortfolioBtn a p{
+
+    margin: 0;
+   
+}
+
+
+
+
+
+.EmailBtn{
+    
+   height: fit-content;
+background-color: transparent;
+   padding-bottom:0.5rem ;
+      padding-top:0.5rem  ;
+      border: none;
+  border: 1px outset rgba(24, 174, 223, 0.858);
+
+  }
+
+
+
+.EmailBtn a{
+    display: flex;
+    align-items: center;
+   font-size: medium;
+   gap: 0.5rem;
+   text-decoration: none;
+   color: white;
+    padding-left:0.8rem;
+   padding-right: 0.8rem ;
+}
+
+
+.EmailBtn a p{
+  margin: 0;
+}
+
+
+
+
+.Technologies{
+    display: flex;
+    width:clamp(10rem,30vw,22rem);
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(7, 2, 46, 0.517);
+    height: 5rem;
+    margin-top: 1vw;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(173, 216, 230, 0.262);
+
+}
+
+
+
+
+
+
+.HtmlContainer,.JsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 4rem;
+height: 100%;
+gap: 0;
+}
+
+
+.HtmlContainer p{
+    margin-top: 0;
+    margin-bottom: 0;
+        line-height: 0;
+
+    color: white;
+    font-size: medium;
+}
+
+
+
+
+
+.JsContainer p{
+    margin-top: 0;
+    margin-bottom: 0;
+        line-height: 0;
+
+    color: white;
+    font-size: medium;
+}
+
+
+.LocalstorageContainer p{
+    margin-top: 0;
+    margin-bottom: 0;
+        line-height: 0;
+
+    color: white;
+    font-size: medium;
+}
+
+
+
+
+
+
+.Html{
+width:4rem ;
+height:4rem ;
+background-image: url(photos/Html.png);
+background-size: cover;
+margin-bottom: 0;
+transition:  0.5s  ease;
+}
+
+
+.Html:hover{
+
+transform: translateY(-15px)  scale(1.2);
+}
+
+
+
+
+.CssContainer{
+
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 4rem;
+height: 90%;
+align-self: flex-start;
+gap: 0rem;
+
+
+}
+
+
+
+
+
+
+.Css{
+width:3rem ;
+height:3.5rem ;
+background-image: url(photos/Css.png);
+background-size: contain;
+background-repeat: no-repeat;
+transition:  0.5s  ease;
+
+}
+
+.Css:hover{
+
+transform: translateY(-15px)  scale(1.2);
+}
+
+
+
+.CssContainer p{
+     margin-top: 0;
+    margin-bottom: 0;
+        line-height: 0;
+
+    color: white;
+    font-size: medium;
+}
+
+
+
+
+
+
+
+
+.Js{
+width:4rem ;
+height:4rem ;
+background-image: url(photos/JsPicture.png);
+background-size: cover;
+transition:  0.5s  ease;
+
+}
+
+
+
+.Js:hover{
+
+transform: translateY(-15px)  scale(1.2);
+}
+
+
+
+
+
+.LocalstorageContainer{
+
+       display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 4rem;
+height: 100%;
+
+gap: 0.6rem;
+}
+
+
+
+
+
+
+
+.Localstorage{
+width:3rem ;
+height:3rem ;
+background-image: url(photos/Database.png);
+background-size: cover;
+transition:  0.5s  ease;
+
+}
+
+
+.Localstorage:hover{
+
+transform: translateY(-15px)  scale(1.2);
+}
+
+
+.LocalstorageContainer p{
+    margin-top: 0;
+    margin-bottom: 0;
+        line-height: 0;
+
+    color: white;
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+.DeveloperDiscription p{
+ color: white;
+ font-size: medium;
+line-height: 1.3rem;
+}
+
+
+
+.WHY{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: clamp(15rem,30vw,20rem);
+    min-height: fit-content;
+    max-height: 20rem;
+    margin-top: 3vw;
+     text-align:left;
+     border-radius: 0.8rem;
+     border: 1px solid rgba(0, 166, 255, 0.583);
+    padding-right: 0.8rem;
+    padding-left: 1.5rem;
+  
+}
+
+.WhyTittle{
+    margin-bottom: 0;
+   color: #5342ef;
+    font-size: xx-large;
+    font-weight: 600;
+   
+}
+
+
+
+.WhyP{
+             font-size: clamp(0.3rem,5vw,0.9rem);
+
+}
+
+
+
+
+
+.Identity{
+    display: flex;
+   width: 100%;
+    height: 30%;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+
+}
+
+
+
+.profileSticker{
+  padding-left:0.6rem ;
+    padding-right:0.6rem ;
+border-radius: 0.8rem;
+    font-size: 2.5rem;
+    border: 1px solid rgba(0, 132, 255, 0.679);
+    background-color: #886bfe7a;
+}
+
+
+
+
+
+
+.IdentityContent{
+display: flex;
+flex-direction: column;
+width: fit-content;
+height: fit-content;
+  align-items: flex-start;
+    justify-content: center;
+
+}
+
+
+
+
+.Identity p{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
 
 .Developer-pic-container{
+    
+position: relative;
+display: flex;
+width:clamp(20rem,35vw,30rem);
+height:clamp(30rem,30vw,35rem);
+align-self: flex-start;
+align-items: center;
+padding-top: 1rem;
+transform: scale(1.2);
+}
+
+
+
+
+.Element {
+    opacity: 0;
+    transform: translateY(10vw) scale(0.92);
+
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.Element.SlideElement {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+
+.Features{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    
+}
+
+
+
+.Top-Of-Features{
+display: flex;
+width: 100%;
+justify-content: space-between;
+height: fit-content;
+}
+
+
+
+.Astronaute{
+    background-image: url(photos/Astronaute.png);
+    background-size: cover;
+    width: 16rem;
+    height: 12rem;
+      animation: float1 3s linear infinite ;
+            animation-delay: 0s;
+
+}
+
+
+
+.FeaturesTextContainer{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    height: fit-content;
+    align-self: center;
+    align-items: center;
+    gap: 0;
+    
+    
+}
+
+.FirstText{
+
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  font-size: medium;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid rgb(132, 0, 255);
+  color:rgb(0, 221, 255) ;
+  border-radius: 1rem;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-top: 0.1rem;
+padding-bottom: 0.1rem;
+margin-bottom: 0;
+}
+
+
+.SecondText{
+    font-size: 4rem;
+    font-weight: 600;
+margin-top: 0;
+margin-bottom: 0;
+
+}
+
+
+
+
+.ThirdText{
+    display: flex;
+    width: 70%;
+margin-top: -10px;
+font-size: medium;
+text-align: center;
+color: hsl(0, 0%, 100%);
+
+}
+
+
+
+
+
+.Astronaute2{
+    background-image: url(photos/Astronaute.png);
+    background-size: cover;
+    width: 16rem;
+    height: 12rem;
+      animation: float2 2s linear infinite ;
+      animation-delay: 1s;
+}
+
+
+
+@keyframes float1 {
+   
+    0%, 100% {
+        transform: translateY(0) ;
+    }
+
+    50% {
+        transform: translateY(-10px) ;
+    }
+}
+
+
+
+@keyframes float2 {
+   
+    0%, 100% {
+        transform: translateY(0) rotateY(180deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotateY(180deg);
+    }
+}
+
+
+
+
+.FeaturesHolder{
+display: flex;
+width: 100%;
+align-self: center;
+justify-content: center;
+min-height: 20rem;
+flex-wrap: wrap;
+flex-shrink: 0;
+    
+    gap:0.6rem;
+}
+
+
+
+.FeaturesContainers{
+display: flex;
+width:clamp(10rem,32vw,31rem);
+height: 23rem;
+border-radius: 0.8rem;
+border: 1px solid purple;
+
+
+}
+
+
+
+.Access,.Notes,.TaskManagement{
 
 display: flex;
-width: 30%;
-height:38rem ;
+width:clamp(10rem,32vw,31rem);
+height: 23rem;
+border-radius: 0.8rem;
+border: 1px solid purple;
+overflow: hidden;
 
+
+}
+
+
+
+
+.correctSercle{
+
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+     
+}
+
+
+
+
+.Access .left{
+ display: flex;
+ flex-direction: column;
+    width: 47%;
+    height: 100%;
+}
+
+
+.AccessTittle-pic,.ManagementTittle-pic,.NotesTittle-pic{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    padding-left: 0.5rem;
+        padding-top: 0.5rem;
+        gap: 0.5rem;
+
+}
+
+
+
+.AccecPicDiv,.ManagementPicDiv{
+    display: flex;
+    width: clamp(1rem, 4vw, 4rem);
+    height: clamp(1rem, 4vw, 4rem);
+    border-radius: 0.8rem;
+background: linear-gradient(
+    120deg,
+      
+    #ed0bc7a5 22%,
+    
+    #004cffd0 50%
+ 
+);
+border: 1px outset rgba(0, 0, 255, 0.514);
+z-index: 1;
+}
+
+
+
+
+
+
+.AccecPic{
+    background-image: url(photos/profile.png);
+    background-size: cover;
+        width: clamp(1rem,4vw,4rem);
+    height: clamp(1rem,4vw,4rem);
+    border-radius: 0.8rem;
+  
+     
+}
+
+
+.AcceesTittle{
+    font-size: clamp(0.5rem,1vw,2rem);
+    font-weight: 600;
+    color: white;
+
+}
+
+
+.FeatureDiscription{
+    font-size: clamp(0.4rem,0.8vw,0.8rem);
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.709);
+    padding-left: 0.5rem;
+    width: 70%;
+}
+
+
+
+.Access .right{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 53%;
+height: 100%;
+}
+
+
+
+
+.HowToCreateAccount{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    height: 90%;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+           border-radius: 0.8rem;
+       border: 2px solid  purple;
+box-sizing: border-box;
+}
+
+
+
+
+.HowToCreateAccount   .Tittle-And-Discription{
+
+display: flex;
+flex-direction: column;
+width: 100%;
+height: fit-content;
+align-items: center;
+   margin-top: 0;
+
+}
+
+
+
+
+.HowToCreateAccount   .Tittle-And-Discription  .tittle{
+
+font-size: clamp(0.3rem,1vw,0.9rem);
+font-weight: 600;
+color: rgb(203, 241, 247);
+margin-bottom: 0;
+margin-top: 0;
+}
+
+
+
+
+
+.HowToCreateAccount   .Tittle-And-Discription  .Discription{
+margin-top: 0;
+text-align: center;
+font-size: clamp(0.3rem,0.7vw,1rem);
+color: lightblue;
+
+}
+
+
+
+.Security {
+
+display: flex;
+flex-direction: column;
+flex: 1;
+gap: 1rem;
+box-sizing: border-box;
+padding-left: 0.2rem;
 padding-top: 1rem;
 }
 
 
 
 
-.Developer-textContainer{
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    height: 30rem;
-      padding-left: 1rem;
-      justify-content: center;
-}
-
-
-
-
-
-.Developer-text{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    
-    justify-content: center;
-}
-
-
-
-
-
-.NameAndLine{
-    display: flex;
-    height: fit-content;
-    max-width:13rem ;
-    gap: 1rem;
-
-}
-
-.aboutme{
-    color: yellow;
-}
-
-
-
-.NameAndLine div{
-    height: 2px;
-    width: 2rem;
-
-   align-self: center;
-background-color: yellow;
-}
-
-.NameAndLine p{
-margin-top: 0;
+.Security  div{
+display: flex;
+width:fit-content ;
+height: fit-content;
+margin-top:0 ;
 margin-bottom: 0;
-color:  yellow;
+
 }
 
 
 
+.Security  div  p{
 
-.DeveloperName{
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size:4rem ;
-    font-weight: 600;
-   color: #fff;
+font-size: clamp(0.4rem,0.8vw,0.7rem);
+margin-top:0 ;
+margin-bottom: 0;
+color: rgb(116, 234, 242);
+
 }
 
 
+.InputsDiv{
 
-.Developer-discription{
-margin-top: 0;
-color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-.Programing-Skills-Container{
-    display: flex;
-    width: 50rem;
-    height: 6rem;
-}
-
-
-.CodeLanguages{
-    display: flex;
-width: 30rem;
-height: 5rem;
+display: flex;
+flex-direction: column;
+width: fit-content;
+height: 75%;
 align-items: center;
-gap: 5%;
-}
-
-
-
-.Programing-Skills-Container h2{
- color:yellow;
-}
-
-.Html{
-    background-image: url(photos/htmlPic.png);
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-    width: 30%;
-    height:90%;
+justify-content: space-between;
+gap: 0.4rem;
 
 }
 
 
+.inputChild{
 
-.Css{
-    background-image: url(photos/cssPic.png);
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-     width: 30%;
-    height:90%;
-    border-radius: 0.5rem;
+
+display: flex;
+width: clamp(5rem,12vw,10rem);
+height: fit-content;
+margin: 0;
+gap: 0.5rem;
+align-items: center;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+border-radius: 0.4rem;
+padding: 0.3rem;
 }
 
 
+.inputP{
 
-
-.Js{
-    background-image: url(photos/jsPic.png);
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-    width: 30%;
-       height:90%;
-
+margin: 0;
+font-size: medium;
+color: rgba(255, 255, 255, 0.56);
 }
 
 
-
-
-
-.Developer-pic{
-background-image: url(photos/Developer.jpg);
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+.FeatureOfSignLog{
     width: 100%;
-    height:100%;
-    border: 1px solid yellow;
-     border-radius: 0.5rem;
-
+    height: fit-content;
+    border-radius: 0.4rem;
+    padding-top:0.3rem ;
+    padding-bottom:0.3rem ;
+    border: 1px  solid blue;
+    background-color:rgb(0, 225, 255) ;
 }
 
 
 
 
 
-.Features{
+
+.AlreadyDiv{
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    align-items: center;
+    gap: 0.4rem;
+    height: fit-content;
 }
+
+
+
+
+.AlreadyAccount{
+    font-size: small;
+    color: white;
+   margin-bottom: 0;
+   margin-top: 0;
+}
+
+
+.Log-in-Feature{
+     font-size: small;
+    color: rgb(131, 85, 239);
+   margin-bottom: 0;
+   margin-top: 0;
+}
+
+
+
+
+
+
+
+.TaskManagement .left{
+ display: flex;
+ flex-direction: column;
+    width: 49%;
+    height: 100%;
+}
+
+
+
+
+
+
+.ManagementPicDiv,.NotesPicDiv{
+
+  display: flex;
+   width: clamp(1rem,4vw,4rem);
+    height: clamp(1rem,4vw,4rem);
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+background: linear-gradient(
+    120deg,
+      
+    #ed0bc7a5 22%,
+    
+    #004cffd0 50%
+);
+border: 1px outset rgba(0, 0, 255, 0.514);
+z-index: 1;
+
+
+
+}
+
+
+
+
+
+
+
+.fa-solid.fa-check,.fa-solid.fa-file-lines{
+
+font-size: clamp(1rem,3vw,3rem);
+color: #6bdcfe;
+
+}
+
+
+.TaskManagement .right {
+
+display: flex;
+flex: 1;
+justify-content: center;
+align-items: center;
+
+}
+
+
+
+.HowToManagement{
+
+display: flex;
+flex-direction: column;
+width:95%;
+height: 90%;
+border-radius:0.7rem;
+       border: 2px solid  purple;
+
+}
+
+
+
+
+.HowToManagement  .Top{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    box-sizing: border-box;
+    
+}
+
+.HowToManagement .Middle{
+    display: flex;
+    width: 100%;
+    height:25%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+
+}
+.HowToManagement .Bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    }
+
+
+
+.TasksPic-text-div{
+
+display:flex;
+width: fit-content;
+height: fit-content;
+gap: 0.5rem;
+}
+
+
+
+
+.TasksPic-text-div .TasksPic{
+
+    background-image: url(photos/pic2.png);
+    background-size: cover;
+    width:clamp(0.8rem,2vw,1.5rem) ;
+ 
+    height:clamp(0.8rem,2vw,1.5rem) ;
+
+}
+
+
+
+
+
+
+.TasksPic-text-div .Text{
+
+font-size: large;
+color: white;
+
+}
+
+
+.HowToManagement  .Top .button{
+
+
+font-size: small;
+border:1px solid #120d6f69;
+background-color: #2160F9;
+border-radius: 0.3rem;
+padding: 0.2rem;
+color: white;
+}
+
+
+
+
+
+.HowToManagement .Middle  div{
+
+display: flex;
+flex-direction: column;
+width: 30%;
+height: 70%;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+border-radius: 0.6rem;
+}
+
+
+
+
+.HowToManagement .Middle  .Pending{
+
+
+background-color: #342eae89;
+border: 1px  solid  blue;
+}
+
+
+
+.HowToManagement .Middle  .High{
+
+
+background-color: rgba(255, 0, 0, 0.424);
+border: 1px  solid  rgba(255, 60, 0, 0.574);
+
+}
+
+
+
+
+.HowToManagement .Middle  .Done{
+
+
+background-color: rgba(0, 128, 0, 0.536);
+border: 1px  solid  rgba(0, 255, 34, 0.438);
+
+}
+
+
+
+
+
+.HowToManagement .Middle  div .Text{
+width: fit-content;
+height: fit-content;
+
+line-height: 0;
+font-size: small;
+}
+
+
+
+.HowToManagement .Middle  div .Num{
+width: fit-content;
+height: fit-content;
+font-size: larger;
+line-height: 0;
+
+
+}
+
+
+
+.HowToManagement .Bottom .Task{
+
+display: flex;
+flex-direction: column;
+width: 95%;
+height: 30%;
+background: rgba(255, 255, 255, 0.187);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+border-radius: 0.5rem;
+justify-content: space-around;
+box-sizing: border-box;
+padding-left: 0.2rem;
+padding-top: 0.2rem;
+}
+
+
+
+.HowToManagement .Bottom .Task .NameTask-Date{
+
+display: flex;
+width: 100%;
+gap: 3rem;
+height: fit-content;
+
+
+}
+
+
+
+
+
+
+
+.HowToManagement .Bottom .Task .NameTask-Date .NameTask{
+
+font-size: small;
+margin: 0;
+color: rgba(255, 255, 255, 0.579);
+
+}
+
+
+.HowToManagement .Bottom .Task  .NameTask-Date .Date{
+
+font-size: x-small;
+margin: 0;
+width: 3.5rem;
+color: rgba(92, 198, 236, 0.721);
+}
+
+
+
+.Type{
+
+    display: flex;
+    width: 100%;
+    height: fit-content;
+
+    
+}
+
+
+
+
+.Type .type{
+
+   width: fit-content;
+   height: fit-content;
+   border-radius: 0.4rem;
+    
+    font-size: small;
+    border: 1px solid rgb(255, 85, 0);
+    margin: 0;
+    padding: 0.1rem;
+}
+
+
+
+.type.High{
+
+color: rgb(238, 104, 104);
+
+}
+
+
+
+.type.Midium{
+
+color: rgba(9, 232, 9, 0.693);
+    
+}
+
+
+.type.low{
+
+color: rgba(255, 255, 0, 0.619);;
+    
+}
+
+
+
+
+
+.type.High{
+background-color: rgba(255, 0, 0, 0.535);
+}
+
+.type.Midium{
+
+background-color: rgba(0, 128, 0, 0.552);
+border: 1px solid rgba(0, 255, 64, 0.52);
+}
+
+.type.low{
+border: 1px solid rgba(255, 255, 0, 0.52);
+  background-color: rgba(255, 255, 0, 0.294);
+}
+
+
+
+
+.Notes .left{
+
+display: flex;
+flex-direction: column;
+width: 45%;
+height: 100%;
+
+}
+
+
+
+.Notes .right{
+
+    display: flex;
+   flex: 1;
+  
+   align-items: center;
+
+}
+
+
+
+.Notes  .right .NotesFeatures{
+
+    display: flex;
+    width:97%;
+    height:80%;
+    border-radius: 0.5rem;
+  border: 2px solid  purple;
+   flex-direction: column;
+}
+
+
+.NotesFeatures .Top{
+
+display: flex;
+width: 100%;
+height: 20%;
+align-items: center;
+padding-right: 0.2rem;
+box-sizing: border-box;
+justify-content: space-between;
+
+}
+
+
+
+
+.NotesFeatures .Middle{
+
+display: flex;
+width: 100%;
+height: 50%;
+
+}
+
+
+
+
+.NotesFeatures .Bottom{
+
+display: flex;
+width: 100%;
+height: 30%;
+
+}
+
+
+
+.NotesFeatures .Top .NotesTitle-pic{
+
+display: flex;
+width: fit-content;
+height: fit-content;
+align-items: center;
+
+}
+
+
+
+.NotesFeatures .Top .NotesTitle-pic p{
+
+
+margin: 0;
+color: white;
+}
+
+
+
+.NotesPic{
+    background-image: url(photos/notes-logo2.png);
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+}
+
+
+.NotesFeatures .Top .Button{
+
+width: fit-content;
+height: fit-content;
+padding: 0.3rem;
+border:1px solid #120d6f69;
+background-color: #2160F9;
+color: white;
+border-radius: 0.3rem;
+font-size: medium;
+}
+
+
+
+
+.Middle .Right{
+
+display: flex;
+width: 50%;
+height: 100%;
+justify-content: center;
+align-items: center;
+
+}
+
+
+
+.Middle .Left{
+display: flex;
+flex-direction: column;
+width: 50%;
+height: 100%;
+justify-content: space-around;
+box-sizing: border-box;
+padding-left: 0.3rem;
+}
+
+
+
+.Middle .Left div{
+
+font-size: medium;
+padding-left: 0.3rem;
+box-sizing: border-box;
+color: rgba(82, 244, 247, 0.782);
+}
+
+
+.AllNotes{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.187);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+
+border-radius: 0.5rem;
+}
+
+
+.NotesFeatures .Middle .Right .NoteExample{
+
+display: flex;
+flex-direction: column;
+width: 94%;
+height: 90%;
+border-radius: 0.6rem;
+border: 1px solid rgba(4, 240, 4, 0.565);
+background-color: rgba(8, 233, 8, 0.166);
+overflow: hidden;
+padding: 0.3rem;
+box-sizing:border-box ;
+}
+
+.NoteExample .Top{
+
+display:flex;
+width:100%;
+height: 30%;
+justify-content: space-between;
+padding-left:0.3rem ;
+padding-right:0.5rem ;
+box-sizing: border-box;
+}
+
+
+
+.fa-solid.fa-thumbtack{
+
+color: gold;
+
+
+}
+
+
+
+
+.NoteExample .Top p{
+
+font-size: small;
+margin: 0;
+color: white;
+}
+
+
+
+
+.NoteExample .Middle{
+
+display:flex;
+width:100%;
+height: 40%;
+font-size: small;
+color: rgba(255, 255, 255, 0.696);
+}
+
+
+
+
+
+.NoteExample .Bottom{
+
+display:flex;
+width:100%;
+height: 30%;
+align-items: center;
+justify-content: space-around;
+
+}
+
+
+.NoteExample .Bottom .Type{
+    width: fit-content;
+font-size: small;
+padding: 0.1rem;
+
+padding-left:0.5rem ;
+padding-right:0.5rem ;
+border-radius: 0.6rem;
+color: rgba(255, 255, 255, 0.806);
+background-color: green;
+border: 1px   solid   rgb(13, 223, 13);
+}
+
+
+
+
+.NoteExample .Bottom .date{
+font-size: x-small;
+color: rgba(255, 255, 255, 0.811);
+}
+
+
+
+
+.NotesFeatures .BottomButtons div{
+width: fit-content;
+height: fit-content;
+
+}
+
+
+
+
+ .BottomButtons{
+
+display: flex;
+justify-content: center;
+flex: 1;
+align-items: center;
+gap: 1.5rem;
+height: fit-content;
+}
+
+
+
+
+ .Add{
+
+background-color: rgba(0, 255, 85, 0.411);
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+border-radius: 0.4rem;
+border: 1px solid rgba(6, 241, 6, 0.621);
+}
+
+
+.Delete{
+
+background-color: rgba(255, 0, 0, 0.555);
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+border-radius: 0.4rem;
+border: 1px solid rgba(241, 6, 14, 0.475);
+
+}
+
+
+.Pinn{
+
+background-color: rgba(174, 255, 0, 0.344);
+padding-left: 0.4rem;
+padding-right: 0.4rem;
+border-radius: 0.4rem;
+border: 1px solid rgba(186, 241, 6, 0.365);
+
+}
+
+
+
+
+ .Modify{
+
+background-color: rgba(0, 0, 255, 0.587);
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+border-radius: 0.4rem;
+border: 1px solid rgba(10, 6, 241, 0.621);
+
+}
+
+
+
+/* =========================================
+   SHARED STYLE FOR THE THREE NEW CONTAINERS
+========================================= */
+
+.FeaturesContainers {
+    display: flex;
+    width: clamp(10rem, 32vw, 31rem);
+    height: 23rem;
+    border-radius: 0.8rem;
+    border: 1px solid purple;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+.FeaturesContainers .left {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    height: 100%;
+    min-width: 0;
+}
+
+.FeaturesContainers .right {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.FeatureTittle-pic {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.FeatureIcon {
+    display: flex;
+  width: clamp(1rem, 4vw, 4rem);
+    height: clamp(1rem, 4vw, 4rem);
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: linear-gradient(
+        120deg,
+        #ed0bc7a5 22%,
+        #004cffd0 80%
+    );
+    border: 1px solid rgba(0, 0, 255, 0.514);
+    box-shadow: 0 0 12px rgba(72, 46, 255, 0.3);
+    color: white;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.FeaturesContainers .AcceesTittle {
+    font-size: clamp(0.6rem, 1.1vw, 0.9rem);
+    font-weight: 600;
+    color: white;
+}
+
+.FeaturesContainers .FeatureDiscription {
+    font-size: clamp(0.35rem, 0.7vw, 0.7rem);
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.709);
+    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.FeatureList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    padding: 0.2rem 0.3rem 0.5rem 0.5rem;
+    box-sizing: border-box;
+}
+
+.FeatureList > div {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.FeatureList i {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: 0.1rem;
+    color: white;
+    font-size: 0.5rem;
+    background: linear-gradient(135deg, #6540f5, #2160f9);
+    border-radius: 50%;
+}
+
+.FeatureList p {
+    margin: 0;
+    color: rgba(220, 238, 255, 0.9);
+    font-size: clamp(0.35rem, 0.65vw, 0.62rem);
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   4. ROUTINES PREVIEW
+========================================= */
+
+.RoutinePreview {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    height: 92%;
+    padding: 0.35rem;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(177, 76, 255, 0.65);
+
+    /* Removed dark background */
+    background: transparent;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    gap: 0.25rem;
+    
+}
+ 
+.RoutinePreviewTop {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    min-height: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2rem;
+}
+
+.PreviewHeading {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    font-size: clamp(0.4rem, 0.7vw, 0.62rem);
+    font-weight: 600;
+}
+
+.PreviewHeading i {
+    color: #d18aff;
+}
+
+.PreviewAdd {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    background: linear-gradient(110deg, #5c31ef, #9a36ed);
+    border: 1px solid rgba(183, 153, 255, 0.5);
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.2rem 0.3rem;
+    font-size: clamp(0.3rem, 0.5vw, 0.45rem);
+    white-space: nowrap;
+    
+}
+
+.RoutineMonth {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    min-height: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    color: rgba(220, 235, 255, 0.9);
+    font-size: clamp(0.35rem, 0.55vw, 0.5rem);
+    border-bottom: 1px solid rgba(135, 151, 255, 0.2);
+}
+
+.RoutineMonth i {
+    color: #8f9cff;
+    font-size: 0.4rem;
+}
+
+.RoutineCalendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    height: 47%;
+    gap: 0.1rem;
+    text-align: center;
+    
+}
+
+.WeekDay,
+.Day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    font-size: clamp(0.3rem, 0.5vw, 0.45rem);
+    border-radius: 0.2rem;
+    color: rgba(220, 235, 255, 0.9);
+}
+
+.WeekDay {
+    color: #7e9fc9;
+    font-weight: 600;
+}
+
+.Day {
+    background-color: rgba(255, 255, 255, 0.035);
+}
+
+.Day.muted {
+    color: rgba(160, 170, 200, 0.35);
+}
+
+.Day.active {
+    background: linear-gradient(135deg, #683af4, #a02bf0);
+    color: white;
+    box-shadow: 0 0 8px rgba(117, 57, 255, 0.6);
+}
+
+.RoutineSchedule {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    gap: 0.2rem;
+}
+
+.ScheduleTitle {
+    color: white;
+    font-size: clamp(0.35rem, 0.6vw, 0.52rem);
+    font-weight: 600;
+}
+
+.RoutineItem {
+    display: flex;
+    align-items: center;
+    min-height: 0;
+    flex: 1;
+    padding: 0.2rem;
+    gap: 0.3rem;
+    border-radius: 0.3rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.RoutineDot {
+    width: 0.35rem;
+    height: 0.35rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.Prayer .RoutineDot {
+    background: #a855f7;
+}
+
+.Study .RoutineDot {
+    background: #00c8ff;
+}
+
+.Sport .RoutineDot {
+    background: #39df8b;
+}
+
+.RoutineInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 0.1rem;
+}
+
+.RoutineInfo span {
+    color: white;
+    font-size: clamp(0.35rem, 0.55vw, 0.48rem);
+}
+
+.RoutineInfo small {
+    color: #91a9c9;
+    font-size: clamp(0.28rem, 0.4vw, 0.38rem);
+}
+
+.RoutineItem > i {
+    color: #5ee9a1;
+    font-size: 0.5rem;
+}
+
+
+/* =========================================
+   5. DASHBOARD & STATISTICS PREVIEW
+========================================= */
+
+.DashboardPreview {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 92%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(149, 66, 255, 0.65);
+
+    /* Removed dark background */
+    background: transparent;
+
+    overflow: hidden;
+    gap: 0.35rem;
+    
+}
+
+.DashboardPreviewTop {
+    display: flex;
+    width: 100%;
+    height: 12%;
+    min-height: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.DashboardPreviewTop > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.DashboardWelcome {
+    color: white;
+    font-size: clamp(0.45rem, 0.7vw, 0.62rem);
+    font-weight: 600;
+}
+
+.DashboardPreviewTop small {
+    color: #91a9c9;
+    font-size: clamp(0.28rem, 0.4vw, 0.38rem);
+}
+
+.DashboardPreviewTop > i {
+    color: #b67cff;
+    font-size: 0.7rem;
+}
+
+.DashboardStats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 39%;
+    gap: 0.3rem;
+}
+
+.StatBox {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 0.3rem;
+    padding: 0.25rem;
+    min-width: 0;
+    border-radius: 0.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.StatBox > i {
+    grid-row: 1;
+    font-size: clamp(0.35rem, 0.6vw, 0.55rem);
+}
+
+.StatNumber {
+    color: white;
+    font-size: clamp(0.5rem, 0.85vw, 0.72rem);
+    font-weight: 600;
+}
+
+.StatBox small {
+    grid-column: 1 / -1;
+    color: #b3c5e4;
+    font-size: clamp(0.28rem, 0.4vw, 0.38rem);
+    white-space: nowrap;
+}
+
+.TotalStat {
+    border-color: rgba(54, 142, 255, 0.35);
+}
+
+.TotalStat > i {
+    color: #51a5ff;
+}
+
+.DoneStat {
+    border-color: rgba(0, 255, 150, 0.3);
+}
+
+.DoneStat > i {
+    color: #32eaa2;
+}
+
+.HighStat {
+    border-color: rgba(255, 90, 85, 0.35);
+}
+
+.HighStat > i {
+    color: #ff7474;
+}
+
+.NotesStat {
+    border-color: rgba(183, 105, 255, 0.35);
+}
+
+.NotesStat > i {
+    color: #c18aff;
+}
+
+.ProgressPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20%;
+    min-height: 2.2rem;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.045);
+    gap: 0.3rem;
+}
+
+.ProgressTitle {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: clamp(0.3rem, 0.5vw, 0.45rem);
+}
+
+.ProgressTitle span:last-child {
+    color: #42d9ff;
+    font-weight: 600;
+}
+
+.ProgressBar {
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.13);
+    overflow: hidden;
+}
+
+.ProgressValue {
+    width: 75%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #2160f9, #05d9ff);
+    box-shadow: 0 0 8px rgba(0, 205, 255, 0.5);
+}
+
+.ProgressDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #91a9c9;
+    font-size: clamp(0.28rem, 0.4vw, 0.38rem);
+}
+
+.ProgressDetails i {
+    color: #36e7a3;
+}
+
+.DashboardBottom {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: 0.3rem;
+}
+
+.StreakBox,
+.WeeklyBox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.StreakBox {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.StreakIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    border-radius: 0.35rem;
+    background: rgba(255, 105, 0, 0.15);
+    color: #ff8a32;
+    font-size: 0.75rem;
+}
+
+.StreakBox > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.StreakNumber {
+    color: white;
+    font-size: clamp(0.35rem, 0.55vw, 0.5rem);
+    font-weight: 600;
+}
+
+.StreakBox small {
+    color: #9eb1d0;
+    font-size: clamp(0.28rem, 0.4vw, 0.36rem);
+}
+
+.WeeklyBox {
+    gap: 0.3rem;
+}
+
+.WeeklyBox > span {
+    color: white;
+    font-size: clamp(0.3rem, 0.5vw, 0.45rem);
+}
+
+.WeeklyBars {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 0.15rem;
+}
+
+.BarGroup {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.1rem;
+}
+
+.Bar {
+    width: 65%;
+    min-height: 0.2rem;
+    border-radius: 0.15rem 0.15rem 0 0;
+    background: linear-gradient(0deg, #6039e8, #14c7ff);
+}
+
+.BarGroup small {
+    color: #91a9c9;
+    font-size: clamp(0.22rem, 0.35vw, 0.32rem);
+}
+
+.bar1 { height: 45%; }
+.bar2 { height: 75%; }
+.bar3 { height: 55%; }
+.bar4 { height: 90%; }
+.bar5 { height: 65%; }
+.bar6 { height: 100%; }
+.bar7 { height: 50%; }
+
+
+/* =========================================
+   6. PROFILE & SETTINGS PREVIEW
+========================================= */
+
+.ProfilePreview {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 92%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(149, 66, 255, 0.65);
+
+    /* Removed dark background */
+    background: transparent;
+
+    overflow: hidden;
+    gap: 0.3rem;
+}
+
+.ProfilePreviewTop {
+    display: flex;
+    width: 100%;
+    height: 9%;
+    min-height: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: clamp(0.4rem, 0.6vw, 0.55rem);
+    font-weight: 600;
+}
+
+.ProfilePreviewTop i {
+    color: #9b8aff;
+}
+
+.ProfileIdentity {
+    display: flex;
+    width: 100%;
+    height: 19%;
+    min-height: 2rem;
+    align-items: center;
+    padding: 0.3rem;
+    gap: 0.4rem;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.ProfileAvatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(1.5rem, 3.5vw, 2.5rem);
+    height: clamp(1.5rem, 3.5vw, 2.5rem);
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #aa65ff;
+    background: linear-gradient(135deg, #5b3bc5, #1687e9);
+    color: white;
+    font-size: clamp(0.6rem, 1vw, 0.85rem);
+}
+
+.ProfileDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 0.15rem;
+}
+
+.ProfileDetails span {
+    color: white;
+    font-size: clamp(0.4rem, 0.6vw, 0.55rem);
+    font-weight: 600;
+}
+
+.ProfileDetails small {
+    color: #a8bbd9;
+    font-size: clamp(0.28rem, 0.4vw, 0.36rem);
+}
+
+.ProfileEdit {
+    color: #80baff;
+    font-size: 0.55rem;
+}
+
+.ProfileMiniStats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    height: 15%;
+    min-height: 1.5rem;
+    gap: 0.2rem;
+}
+
+.ProfileMiniStats > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    border-radius: 0.3rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(143, 110, 255, 0.2);
+    gap: 0.1rem;
+}
+
+.ProfileMiniStats strong {
+    color: white;
+    font-size: clamp(0.4rem, 0.65vw, 0.58rem);
+}
+
+.ProfileMiniStats small {
+    color: #a8bbd9;
+    font-size: clamp(0.22rem, 0.35vw, 0.3rem);
+    text-align: center;
+}
+
+.SettingsHeading {
+    color: #c5a0ff;
+    font-size: clamp(0.35rem, 0.55vw, 0.48rem);
+    font-weight: 600;
+    padding-top: 0.15rem;
+}
+
+.SettingRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 1.7rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    gap: 0.35rem;
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.SettingIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+    border-radius: 0.3rem;
+    color: #c09aff;
+    background: rgba(133, 80, 255, 0.2);
+    font-size: 0.55rem;
+}
+
+.SettingText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 0.1rem;
+}
+
+.SettingText span {
+    color: white;
+    font-size: clamp(0.3rem, 0.5vw, 0.45rem);
+}
+
+.SettingText small {
+    color: #91a9c9;
+    font-size: clamp(0.25rem, 0.35vw, 0.32rem);
+}
+
+.ThemeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 1.4rem;
+    height: 0.75rem;
+    padding: 0.1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: #4937e9;
+}
+
+.ThemeSwitch div {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: white;
+}
+
+.SettingArrow {
+    color: #8c9fcb;
+    font-size: 0.45rem;
+}
+
+.VoiceChoices {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 0.25rem;
+}
+
+.VoiceChoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    gap: 0.25rem;
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aab9df;
+}
+
+.VoiceChoice i {
+    font-size: clamp(0.45rem, 0.7vw, 0.6rem);
+}
+
+.VoiceChoice small {
+    font-size: clamp(0.22rem, 0.35vw, 0.3rem);
+    text-align: center;
+}
+
+.ActiveVoice {
+    color: white;
+    border-color: #874aff;
+    background: rgba(119, 56, 255, 0.2);
+    box-shadow: inset 0 0 8px rgba(138, 64, 255, 0.15);
+}
+
+
+
+
+.Testimonials{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  min-height: max(900px, 100vh);
+    
+
+}
+
+
+
+.Testimonials  .Top{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.Testimonials  .Top .FirstText{
+
+    width: fit-content;
+    height: fit-content;
+ background-color: #3a33c840;
+    padding-left:1.5rem ;
+    padding-right:1.5rem ;
+    padding-top:0.2rem ;
+    padding-bottom:0.2rem ;
+    border-radius: 2rem;
+margin: 0;
+   
+}
+
+
+
+
+.Testimonials  .Top .Text{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:35rem;
+height: 100%;
+gap:1rem;
+}
+
+
+
+
+
+.Testimonials  .Top .SecondText{
+
+font-size: clamp(1rem,3vw,3rem);
+text-align: center;
+line-height:3rem;
+width:24rem;
+margin: 0;
+}
+
+
+
+.MoreTalk{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    text-align: center;
+}
+
+
+.Wrapper{
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+
+
+.Carousel{
+
+display: flex;
+min-width: fit-content;
+height: 90%;
+gap: 1rem;
+animation: Carousel 30s linear  forwards infinite  ;
+}
+
+
+
+
+.CommentContainer {
+    position: relative;
+
+    margin-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(15rem, 25vw, 20rem);
+    height: 95%;
+
+    flex-shrink: 0;
+    gap: 1.5rem;
+
+    border-radius: 2rem;
+
+    /* Glass surface */
+    background: rgba(255, 255, 255, 0.187);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* Normal glass border */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SOFT SUNLIGHT ON ALL FOUR SIDES
+========================================= */
+
+.CommentContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+    pointer-events: none;
+
+    background:
+
+        /* TOP */
+        radial-gradient(
+            ellipse 40% 14px at 50% 0%,
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.15) 35%,
+            transparent 75%
+        ),
+
+        /* RIGHT */
+        radial-gradient(
+            ellipse 14px 40% at 100% 50%,
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.15) 35%,
+            transparent 75%
+        ),
+
+        /* BOTTOM */
+        radial-gradient(
+            ellipse 40% 14px at 50% 100%,
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.15) 35%,
+            transparent 75%
+        ),
+
+        /* LEFT */
+        radial-gradient(
+            ellipse 14px 40% at 0% 50%,
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.15) 35%,
+            transparent 75%
+        );
+
+    filter: blur(1px);
+}
+
+
+/* =========================================
+   INNER GLASS REFLECTION
+========================================= */
+
+.CommentContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 255, 255, 0.04),
+        inset 0 1px 3px rgba(255, 255, 255, 0.15),
+        inset 0 -1px 3px rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+
+@keyframes Carousel{
+
+from{
+    transform: translateX(-50%);
+}
+
+to{
+    transform: translateX(0);
+}
+
+
+}
+
+
+
+.CommentTittle{
+
+display: flex;
+flex-direction: column;
+width: 55%;
+height: fit-content;
+gap: 0;
+padding-left: 1.5rem;
+}
+
+
+
+
+.Feedback{
+    font-size:clamp(0.5rem,2vw,1.8rem);
+    font-weight: 600;
+    line-height: 0;
+    color: white;
+}
+
+
+.Client{
+        font-size:clamp(0.5rem,2vw,1.5rem);
+    margin: 0;
+        color: rgba(255, 255, 255, 0.757);
+
+}
+
+
+.Stars{
+    
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    
+
+}
+
+
+
+.StarsOfUser-Date{
+
+display: flex;
+width: fit-content;
+height: fit-content;
+align-items: center;
+gap: 0.5rem;
+}
+
+
+
+.StarsOfUser-Date .StarsOfUser {
+width: fit-content;
+height: fit-content;
+font-size: small;
+margin: 0;
+
+}
+
+.StarsOfUser-Date .Date {
+font-size: small;
+margin: 0;
+color: rgba(255, 255, 255, 0.301);
+}
+
+
+
+
+
+
+.TheComment{
+
+display: flex;
+flex-direction: column;
+width: 90%;
+height: 45%;
+border-radius: 1rem;
+gap: 0.2rem;
+background-color: #4b5052;
+border: 2px solid rgba(0, 0, 0, 0.409);
+align-self: center;
+padding-left:0.5rem;
+box-sizing: border-box;
+
+
+}
+
+
+
+
+
+
+
+.TheComment .TopOfComment{
+
+display: flex;
+width: 100%;
+height: 35%;
+
+}
+
+
+.TheComment .TopOfComment .Profile{
+
+background-image: url(photos/profile.png);
+background-size: cover;
+width: 2.5rem;
+height: 2.5rem;
+
+
+}
+
+
+.Name-Review-threedots{
+
+display: flex;
+flex: 1;
+
+}
+
+
+.Name{
+    font-size: large;
+    color: white;
+}
+
+
+
+
+.Reviews{
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.491);
+}
+
+
+
+
+.CommentText{
+    font-size: small;
+    width: 90%;
+    color: rgba(255, 255, 255, 0.654);
+}
+
+
+
+.ThankMessage{
+    display: flex;
+    align-self: center;
+background: linear-gradient(
+    135deg,
+    #0b132bb0,
+    #162447a5,
+    #1f6e8b9c
+);   
+border: 1px solid rgba(255, 255, 255, 0.511);
+color: white;
+    text-align: center;
+    font-size: clamp(0.5rem,1vw,0.7rem);
+    width:clamp(5rem,30vw,20rem) ;
+    padding: 0.8rem;
+    border-radius: 2.5rem;
+
+}
+
+
+.Contact-Us{
+    display: flex;
+    flex-direction: column;
+ justify-content: space-around;
+   
+    width: 100%;
+    min-height:100vh ;
+}
+
+
+.Contact-Us  .Top{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+width: 100%;
+height: fit-content;
+
+
+}
+
+
+.Contact-Us  .Top .Tittle{
+
+    margin: 0;
+line-height: 0;
+color: rgba(255, 255, 255, 0.593);
+
+}
+
+
+
+
+.Contact-Us  .Top .SecondText{
+
+    margin: 0;
+line-height: 4rem;
+color: white;
+}
+
+
+
+
+.Contact-Us  .Top .ThirdText{
+
+    margin: 0;
+line-height: 1.2rem;
+width: 30rem;
+color: rgba(255, 255, 255, 0.593);
+
+}
+
+
+
+
+.ContactContainer{
+
+display: flex;
+width:clamp(15rem,50vw,50rem);
+height: clamp(13rem,29vw,35rem);
+align-self: center;
+border-radius: 0.8rem;
+overflow: hidden;
+
+border: 1px  solid rgba(173, 216, 230, 0.646);
+}
+
+
+.Left{
+
+display: flex;
+flex-direction: column;
+width: 50%;
+height: 100%;
+gap: 1rem;
+box-sizing: border-box;
+padding: 2rem;
+
+background-color: #05475972;
+}
+
+
+.TextsOfcontact{
+
+display: flex;
+flex-direction: column;
+width: 70%;
+height: fit-content;
+
+
+}
+
+
+.TitleToContact{
+
+   font-size: x-large;
+   font-weight: 600;
+margin: 0;
+
+color: white;
+}
+
+
+
+.DiscriptionToContact{
+
+   font-size: small;
+
+margin: 0;
+
+color: rgba(255, 255, 255, 0.655);
+}
+
+
+
+
+.ToolsToContact{
+
+display: flex;
+flex-direction: column;
+width: 90%;
+height: 60%;
+justify-content: space-around;
+
+overflow: hidden;
+border-radius: 0.6rem;
+
+}
+
+
+
+
+.EmailToConact,.NumberToContact,.WhatsUpToContact{
+
+display: flex;
+width: 100%;
+height: 30%;
+align-items: center;
+padding-left: 0.5rem;
+box-sizing: border-box;
+background-color: #00c8ff7b;
+border-radius: 0.5rem;
+border: 1px solid rgba(173, 216, 230, 0.771);
+}
+
+
+
+
+
+.ContactPic1{
+background-image: url(photos/gmail.png);
+background-size: cover;
+background-position: center;
+width: clamp(1rem,3vw,2.5rem);
+height: 60%;
+min-height: 2rem;
+
+}
+.ContactPic2{
+
+background-image: url(photos/discuter.png);
+background-size: cover;
+width: clamp(1rem,3vw,2.5rem);height: 65%;
+height: 60%;
+min-height: 2rem;
+
+}
+
+
+.ContactPic3{
+background-image: url(photos/listening.png);
+background-size: cover;
+width: 3rem;
+width: clamp(1rem,3vw,2.5rem);height: 65%;
+height: 60%;
+min-height: 2rem;
+}
+
+
+.ContactTextDiv{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex: 1;
+padding-left: 0.5rem;
+
+box-sizing: border-box;
+
+}
+
+
+.TittleOfgmail,.TittleOfNumber,.TittleOfWhatsup{
+
+    font-size: large;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+
+.gmailDiscription,.NumberDiscription,.WhatsupDiscription{
+
+    font-size: small;
+      color: rgba(255, 255, 255, 0.899);
+    margin: 0;
+}
+
+
+
+
+.Right{
+
+display: flex;
+flex-direction: column;
+width: 50%;
+height: 100%;
+padding: 1rem;
+box-sizing: border-box;
+}
+
+
+
+.TittleOfInputs{
+
+font-size: x-large;
+font-weight: 600;
+color: white;
+margin: 0;
+}
+
+
+
+
+.NameeEmailDiv{
+
+display: flex;
+
+width: 100%;
+height: clamp(3rem,6.5vw,4.8rem);
+
+}
+
+
+
+.NameDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+   
+}
+
+
+
+
+
+.EmailDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.UserInputName,.UserEmail{
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.893);
+}
+
+.UserInput,.UserEmailInput{
+
+width: 80%;
+font-size: clamp(0.4rem,1vw,0.7rem);
+padding: 0.3rem;
+border: 2px  solid  rgba(173, 216, 230, 0.353) ;
+outline: none;
+border-radius: 0.3rem;
+color: rgba(255, 255, 255, 0.629);
+font-family: 'Poppins',sans-serif;
+background-color: transparent;
+}
+
+
+
+ ::placeholder{
+       color: rgba(255, 255, 255, 0.534);
+    padding-left: 0.2rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+
+
+
+
+.SubjectDiv{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+height: clamp(3rem,5vw,4rem);
+    gap:0.1rem;
+        box-sizing: border-box;
+
+}
+
+
+.Subject{
+   
+    width:100%;
+    height: fit-content;
+    padding: 0.3rem;
+ 
+    border: 2px  solid  rgba(173, 216, 230, 0.353) ;
+    border-radius: 0.3rem;
+    outline: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.629);
+font-family: 'Poppins',sans-serif;
+}
+
+
+
+.SubjectLabel{
+    margin: 0;
+   font-size: clamp(0.4rem,1vw,1rem);
+ color: rgba(255, 255, 255, 0.854);
+}
+
+
+
+.MessageDive{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: clamp(5rem,14vw,10rem);
+    padding-top: 0.3rem;
+    box-sizing: border-box;
+}
+
+
+.MessageLabel{
+
+font-size: clamp(0.5rem,1.5vw,1rem);
+ color: rgba(255, 255, 255, 0.854);
+}
+
+
+
+
+.Message{
+
+width: 100%;
+height:70%;
+resize:none ;
+outline: none;
+border-radius: 0.4rem;
+border: 2px solid rgba(255, 255, 255, 0.496);
+background-color: transparent;
+padding: 0.5rem;
+box-sizing: border-box;
+color: rgba(255, 255, 255, 0.629);
+font-family: 'Poppins',sans-serif;
+}
+
+
+.ButtonOfContactDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  flex: 1;
+   gap: 0.3rem;
+}
+
+
+.ButtonOfContactDiv  button{
+      display: flex;
+       width: 90%;
+       height: fit-content;
+       align-items: center;
+       gap: 0.4rem;
+       justify-content: center;
+       font-size:clamp(0.6rem,1vw,1rem) ;
+        border-radius: 1rem;
+        outline: none;
+        border: 1px solid rgba(173, 216, 230, 0.682);
+background: linear-gradient(90deg, #63e6e2 0%, #a392f8 100%);
+       padding-top:0.5rem ;
+       padding-bottom:0.5rem ;
+              box-shadow: 0 8px 40px rgba(255, 255, 255, 0.219);
+
+}
+
+
+
+
+
+
+
+.ButtonOfContactDiv  button:hover{
+    
+
+background: transparent;
+
+color: white;
+}
+
+
+.ButtonOfContactDiv  button:hover  p{
+    
+
+
+
+color: white;
+}
+
+
+
+
+
+.ButtonOfContactDiv  button i{
+   margin: 0;
+         font-size: medium;
+}
+
+
+
+.ButtonOfContactDiv  p{
+ font-size:clamp(0.4rem,1vw,0.6rem);
+ margin: 0;
+ color: rgba(255, 255, 255, 0.645);
+}
+
+
+.ButtonOfContactDiv button p{
+ font-size:clamp(0.4rem,1vw,0.6rem);
+ margin: 0;
+ color: black;
+}
+
+
+
+
+
+
+
+

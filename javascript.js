@@ -10,9 +10,35 @@ const delete_alert=document.getElementById("delete-alert");
 const password=document.getElementById("password");
 const alert_message2=document.getElementById("alert-password-length");
 const delete_alert2=document.getElementById("delete-alert2");
+const Age=document.getElementById("age");
+
 
 const name=document.getElementById("name");
 const surname=document.getElementById("surname");
+import { UserInformations } from "./Shared/Data/User-Info.js";
+
+let  UserInfo_Object={};
+let  LoadedUserInfo={};
+window.addEventListener("load",()=>{
+
+
+  LoadedUserInfo=JSON.parse(localStorage.getItem("UserInfo_Object"));
+
+     password.value="";
+     Age.value="";
+     name.value="";
+     surname.value="";
+     email.value="";
+
+
+});
+
+
+
+
+
+
+
 
 submit_btn.addEventListener("mouseenter",function(event){
  submit_btn.style.width="45%";
@@ -22,7 +48,7 @@ submit_btn.addEventListener("mouseenter",function(event){
     submit_btn.addEventListener("mouseleave",function(event){
   
         submit_btn.textContent="Submit";
-        submit_btn.style.width="35%";
+        submit_btn.style.width="55%";
 
 
      });
@@ -61,19 +87,48 @@ submit_btn.addEventListener("mouseenter",function(event){
           alert_message2.style.zIndex="2";
 
       alert_sound.play();
-       /* alert("Password length must be at least 8 charachtors length!!!⚠️");
-         */
+       //alert("Password length must be at least 8 charachtors length!!!⚠️");
+         
    }
 
    
- 
 
-   if(password.value.length>=8  && email.value.length!=0){
+ UserInfo_Object=UserInformations(username,usersurname,email.value,password.value,Age.value,null);
+
+ localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+
+ if(password.value.length>=8  && email.value.length!=0){
+
 localStorage.setItem("username", username);
+
+                    
+                                     if(LoadedUserInfo!=null){
+
+                                              if(LoadedUserInfo.UserPassword!=UserInfo_Object.UserPassword){
+
+                                              alert("Wrong Password");
+
+                                            return;
+
+                                        }
+
+                                     }
+                        
+
+                      
+      
+                  
+      
+
+  
+
 window.location.href = 'pageLoad.html';
    
         
    }
+
+ 
+
 
    
 });

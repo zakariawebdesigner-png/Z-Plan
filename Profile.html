@@ -63,7 +63,7 @@
                             
                                     <div class="RecordsDiv">
                         
-                                         <div class="LevelSticker"></div> 
+                                   <!--   <div class="LevelSticker"></div> 
                                             <div class="XPNum">13000 / 5000XP</div>
 
                                          <div class="Line-and-percentage">
@@ -72,11 +72,11 @@
                                             </div>
                                               
                                                <div class="percentage">70%</div>
-                                         </div>
+                                         </div>--->
                                         
                          
                        
-                                    </div>
+                                    </div>   
                        
                               <div class="QuotsContainer">
                                       <div class="Quotes">
@@ -101,9 +101,9 @@
 
                                                          <div class="sticker-text">
                                                  <div class="sticker4"></div>
-                                                 <div class="TextOfTaskesCreated">Taskes Created </div>
+                                                 <div id="TextOfTaskesCreated" class="TextOfTaskesCreated">Completed Tasks </div>
                                              </div>
-                                              <div class="num4">46</div>
+                                              <div id="num4" class="num4"></div>
                                              <div class="lastDiv4">View All Taskes </div>
                                     </div>
                                     <div class="NotesCreated">
@@ -111,7 +111,7 @@
                                                  <div class="sticker3"></div>
                                                  <div class="TextOfNotesCreated">Notes Created</div>
                                              </div>
-                                         <div class="num3">30</div>
+                                         <div id="num3" class="num3"></div>
                                          <div class="lastDiv3">View All Notes </div>
                                       
                                     </div>
@@ -121,7 +121,8 @@
                                             <div class="sticker"></div>
                                             <div class="TextOfStreeek">Current Streek</div>
                                          </div>
-                                         <div class="num"><span class="spanned1" >17</span> <span class="spanedText" >days</span></div>
+                                         
+                                         <div class="num"><span id="CurrentStreekNum" class="spanned1" ></span><span class="spanedText" >days</span></div>
                                          <div class="lastDiv">keep it Up🔥</div>
                                       
                                         </div>
@@ -130,7 +131,7 @@
                                                <div class="sticker2"></div>
                                             <div class="TextOfCompletiopnRate">Completion Rate </div>
                                         </div>
-                                        <div class="num2">90%</div>
+                                        <div class="num2" id="num2"></div>
                                         <div class="lastDiv2">Amazing job  ⭐</div>
                                     </div>
                              </div>
@@ -158,14 +159,14 @@
                            <canvas id="weeklyStateChart" role="img" aria-label="Bar chart of tasks done and notes added per day for the current week"></canvas>
                        </div>
                    </div>
-               
+              
                      <div class="TasksNotesDivOf OfChart">
                            <div class="TasksDone">
                                  <div class="StickerText">
                                      <div class="DoneTasksSticker"></div>
                                      <p>Taskes Completed</p>
                                  </div>
-                                 <div class="numTasksDone">
+                                 <div id="numTasksDone-InChart" class="numTasksDone">
                                       28 
                                  </div>
                            </div>
@@ -174,139 +175,37 @@
                                      <div class="AddedNotesSticker"></div>
                                      <p>Notes Added</p>
                                  </div>
-                                 <div class="numTasksDone">
+                                 <div id="numNotesAdded-InChart" class="numTasksDone">
                                       56 
                                  </div>
                            </div>
                      </div>
                 </div>
-                <div class="Activity">
+                <div id="Activity" class="Activity">
                     <div class="recentActivityText">Recent Activity</div>
                     <div class="activityDiv">
-                    <div class="DotsDiv">
+                    <div id="DotsDiv" class="DotsDiv">
                          
                        
-                      
-                        <div class="PointContainer">
-                            <div class="lineOfActivity3"></div>
-                            <div class="point"></div>
-                        </div>
-
-                        
-                        <div class="PointContainer">
-                            <div class="lineOfActivity2"></div>
-                            <div class="point"></div>
-                        </div>
-   
-                        <div class="PointContainer">
-                            <div class="lineOfActivity2"></div>
-                            <div class="point"></div>
-                        </div>
-                          <div class="PointContainer">
-                            <div class="lineOfActivity2"></div>
-                            <div class="point"></div>
-                        </div>
-                          <div class="PointContainer">
-                            <div class="lineOfActivity2"></div>
-                            <div class="point"></div>
-                        </div>
-                        
-                         
-                         
-                        
-                      
-                     
                     </div>
 
-                    <div class="ActivityContainer">
-                        <div class="activity">
-                            <div class="ProfileInsideAct-Container">
-                                <div class="ProfileInsideAct"></div>
-                            </div>
-                              
-                            <div class="textInsideAct">
-                                    <div class="DateOfActivity">
-                                        Today, 11:30 AM
-                                    </div>
-                               <div class="TheActivity">
-                                   Created a new Task
-                               </div>
-                               <div class="WhatsDone">"Math Homework"</div>
-                            </div>
-                           
-                        </div>
+                    <div id="ActivityContainer" class="ActivityContainer">
+                       
 
-                       <div class="activity">
-                               <div class="ProfileInsideAct-Container">
-                                <div class="ProfileInsideAct"></div>
-                            </div>
-                            <div class="textInsideAct">
-                                    <div class="DateOfActivity">
-                                        Today, 11:30 AM
-                                    </div>
-                               <div class="TheActivity">
-                                   Created a new Note
-                               </div>
-                                <div class="WhatsDone">"Project Ideas"</div>
-                            </div>
-                           
-                        </div>
-                        <div class="activity">
-                               <div class="ProfileInsideAct-Container2">
-                                <div class="completeTaskSticker"></div>
-                            </div>
-                            <div class="textInsideAct">
-                                    <div class="DateOfActivity">
-                                        Today, 11:30 AM
-                                    </div>
-                               <div class="TheActivity">
-                                   Complete  a Task
-                               </div>
-                                <div class="WhatsDone">"Css Project"</div>
-                            </div>
-                           
-                        </div>
-                        <div class="activity">
-                              <div class="ProfileInsideAct-Container">
-                                <div class="ProfileInsideAct"></div>
-                            </div>
-                            <div class="textInsideAct">
-                                    <div class="DateOfActivity">
-                                        Today, 11:30 AM
-                                    </div>
-                               <div class="TheActivity">
-                                Changed  Avatar
-                               </div>
-                            </div>
-                           
-                        </div>
-                        <div class="activity">
-                               <div class="ProfileInsideAct-Container">
-                                <div class="ProfileInsideAct"></div>
-                            </div>
-                            <div class="textInsideAct">
-                                    <div class="DateOfActivity">
-                                        Today, 11:30 AM
-                                    </div>
-                               <div class="TheActivity">
-                                   Delete a Task
-                               </div>
-                                <div class="WhatsDone">"Gym"</div>
-                               
-                            </div>
-                           
-                        </div>
+                  
+                        
+                       
                     </div>
                     </div>
                 </div>
-                <div class="Achievements"></div>
+               <!-- <div class="Achievements"></div>--->
             </div>
        </section>      
 
                
-            <script src="statistics-chart.js"></script>
+            <script type="module" src="./Profile-Folder/Profile-Main.js"></script>
 <script src="clock-ui.local.js"></script>
 
-    <script  src="ProfileJavaScript.js" ></script>
+    <script type="module" src="ProfileJavaScript.js" ></script>
  </body>
  </html>

@@ -10,10 +10,16 @@ align-items: center;
 overflow: hidden;
 width: 100vw;
 height: 100vh;
-background-image: url(background1/pic1.jpg);
-/*background-color: aliceblue;*/
-background-size: cover;
-background-position: center;
+
+background: linear-gradient(
+    rgb(147, 51, 234),
+    
+    rgb(50, 15, 98),
+    rgb(1, 0, 2)
+);    font-family: 'Poppins',sans-serif;
+
+
+
 
 }
 
@@ -40,7 +46,7 @@ font-size: 2rem;
 
   /* smooth iOS look */
   letter-spacing: 1px;
-  
+  color: rgba(240, 248, 255, 0.785);
 top: 1rem;
 font-family: 'Poppins',sans-serif;
 opacity:0 ;
@@ -170,23 +176,43 @@ form{
 display: flex;
 flex-direction: column;
 align-self: center;
-width: 9rem;
+align-items: center;
+width: clamp(4rem,30vw,20rem);
 height: 11rem;
 margin-top: 4.3rem;
 border-radius: 0.5rem;
-background-color: rgba(158, 156, 236, 0.25);
+padding: 0.3rem;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+border: 1px solid rgba(147, 51, 234, 0.35);
 
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-
-
-
-border: 1px solid rgba(255,255,255,0.3);
 box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 opacity: 0;
 animation: opacity-form 1s linear forwards;
-
+box-sizing: border-box;
+transition: 0.8s  ease;
 }
+
+
+
+
+
+
+
+
+
+form:hover{
+box-shadow: 0  2px 40px rgba(255, 255, 255, 0.482);
+}
+
+
+
+
+
+
+
 
 
 .PasswordErrorDetect{
@@ -236,29 +262,34 @@ transform: translateY(0);
 
 
 input{
-align-self: center;
+
 padding-left: 0.2rem;
 width: 70%;
 height: 0.9rem;
 font-size: 0.5rem;
-border-radius: 0.3rem ;
+border-radius: 0.2rem ;
 outline: none;
 margin-top: 0.3rem;
-background-color: transparent;
+border: none;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.12);
+
 }
 
 
 .password{
   font-size: 0.45rem;
 }
-.login-p{
+.Sign-Up{
 text-align: center;
 font-family: 'Poppins',sans-serif;
 font-weight: 700;
   padding: 0;
   margin-bottom: 0.1rem;
   margin-top: 0.5rem;
-
+color: white;
 }
 
 
@@ -267,15 +298,14 @@ font-size: 0.4rem;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family:'Courier New', Courier, monospace;
-  color: white;
-  font-weight: 300;
+  color: rgba(205, 144, 238, 0.618);
+  font-weight: 400;
 
 }
 
 ::placeholder{
     font-size: large;
-
+color: #f8fafcab;
 }
 
 
@@ -297,9 +327,9 @@ margin-top: 0.5rem;
 
 
 .submite{
-width: 35%;
+width:55%;
 font-size: 0.68rem;
-border-radius: 0.25rem;
+border-radius: 0.15rem;
 border: none;
 transition:  transform 0.1s linear ;
 cursor: pointer;
@@ -320,7 +350,7 @@ padding-left: 0.2rem;
 font-size: 0.4rem;
 font-family: 'Poppins',sans-serif;
 text-decoration: underline;
-color: blue;
+color: rgba(202, 224, 237, 0.658);
 cursor: pointer;
 }
 
