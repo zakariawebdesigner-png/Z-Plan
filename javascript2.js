@@ -261,10 +261,10 @@ cards.forEach(card => {
 
               
                 let UserInfo_Object= JSON.parse(localStorage.getItem("UserInfo_Object"));
-                
-               UserInfo_Object.AiVoice=card.id;
-               
-               localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                if (UserInfo_Object) {
+                    UserInfo_Object.AiVoice=card.id;
+                    localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                }
                 AiVoice(voice.audio);
       console.log(UserInfo_Object);
             friendlyVoice.pause();
@@ -282,8 +282,10 @@ cards.forEach(card => {
             AiVoice(voice.audio);
 
                 let UserInfo_Object= JSON.parse(localStorage.getItem("UserInfo_Object"));
-               UserInfo_Object.AiVoice=card.id;
-               localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                if (UserInfo_Object) {
+                    UserInfo_Object.AiVoice=card.id;
+                    localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                }
             energeticVoice.pause();
             professionalVoice.pause();
             Calmevoice.pause();
@@ -298,8 +300,10 @@ cards.forEach(card => {
 
             AiVoice(voice.audio);
                        let UserInfo_Object= JSON.parse(localStorage.getItem("UserInfo_Object"));
-               UserInfo_Object.AiVoice=card.id;
-               localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                       if (UserInfo_Object) {
+                           UserInfo_Object.AiVoice=card.id;
+                           localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+                       }
             friendlyVoice.pause();
             professionalVoice.pause();
             Calmevoice.pause();
@@ -314,8 +318,10 @@ cards.forEach(card => {
 
             AiVoice(voice.audio);
    let UserInfo_Object= JSON.parse(localStorage.getItem("UserInfo_Object"));
-               UserInfo_Object.AiVoice=card.id;
-               localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+   if (UserInfo_Object) {
+       UserInfo_Object.AiVoice=card.id;
+       localStorage.setItem("UserInfo_Object",JSON.stringify(UserInfo_Object));
+   }
             friendlyVoice.pause();
             energeticVoice.pause();
             Calmevoice.pause();
@@ -458,6 +464,8 @@ if(localStorage.getItem("UserInfo_Object")){
 
 }
 
+if (!UserInfo_Object) return;
+
         UserInfo_Object.name=name.value;
                 UserInfo_Object.UserName=name.value;
 
@@ -489,6 +497,8 @@ if(JSON.parse(localStorage.getItem("UserInfo_Object"))){
   UserInfo_Object=JSON.parse(localStorage.getItem("UserInfo_Object"));
 
 }
+
+if (!UserInfo_Object) return;
     
                
     const style = getComputedStyle(avatar);
@@ -570,7 +580,7 @@ ProfileSettings_arrow.addEventListener("click", () => {
 
 import { appearenceChoices } from './Tasks-Page-Folder/Task-Elements.js'; 
 
-import { StyleMode } from '../../Shared/Ui/Theme-Modes.js';
+import { StyleMode } from './Shared/Ui/Theme-Modes.js';
 
 appearenceChoices.forEach(choice => {
 
