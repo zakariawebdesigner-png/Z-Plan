@@ -1010,20 +1010,23 @@ line-height: 1.3rem;
     display: flex;
     flex-direction: column;
     color: white;
-    width: clamp(15rem,30vw,20rem);
-    min-height: fit-content;
-    max-height: 20rem;
+    width: clamp(15rem,30vw,23rem);
+    height: fit-content;
+   
     margin-top: 3vw;
      text-align:left;
      border-radius: 0.8rem;
      border: 1px solid rgba(0, 166, 255, 0.583);
     padding-right: 0.8rem;
     padding-left: 1.5rem;
-  
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+
+  box-sizing: border-box;
 }
 
 .WhyTittle{
-    margin-bottom: 0;
+    margin: 0;
    color: #5342ef;
     font-size: xx-large;
     font-weight: 600;
@@ -1033,6 +1036,8 @@ line-height: 1.3rem;
 
 
 .WhyP{
+        margin: 0;
+
              font-size: clamp(0.3rem,1vw,0.8rem);
 
 }
@@ -1044,12 +1049,11 @@ line-height: 1.3rem;
 .Identity{
     display: flex;
    width: 100%;
-    height: 30%;
+    height: 20%;
     align-self: flex-end;
     align-items: center;
     justify-content: flex-start;
     gap: 0.8rem;
-
 }
 
 
