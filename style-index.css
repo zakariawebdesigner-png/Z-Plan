@@ -21,7 +21,7 @@ html{
 body{
 display: flex;
 flex-direction: column;
-border: 1px solid red;
+
 justify-content: center;
 margin: 0;
     width: 100%;
@@ -3878,6 +3878,35 @@ color: white;
  font-size:clamp(0.4rem,1vw,0.6rem);
  margin: 0;
  color: black;
+}
+
+
+/* Keep feature cards and their text inside the flex layout across browsers. */
+.FeaturesHolder {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.FeaturesHolder > .Access,
+.FeaturesHolder > .Notes,
+.FeaturesHolder > .TaskManagement {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.FeaturesHolder > .Access .left,
+.FeaturesHolder > .Access .right,
+.FeaturesHolder > .Notes .left,
+.FeaturesHolder > .Notes .right,
+.FeaturesHolder > .TaskManagement .left,
+.FeaturesHolder > .TaskManagement .right {
+    min-width: 0;
+}
+
+.FeaturesHolder .FeatureDiscription,
+.FeaturesHolder .Security p {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 
