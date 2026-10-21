@@ -1011,7 +1011,7 @@ line-height: 1.3rem;
     flex-direction: column;
     color: white;
     width: clamp(15rem,30vw,23rem);
-    height: fit-content;
+    height: clamp(15rem,30vw,23rem);
    
     margin-top: 3vw;
      text-align:left;
