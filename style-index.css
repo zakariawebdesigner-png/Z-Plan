@@ -8,7 +8,6 @@ html{
 
 * {
     scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 *::-webkit-scrollbar {
@@ -1162,6 +1161,7 @@ height: fit-content;
     
     
 }
+
 
 .FirstText{
 
