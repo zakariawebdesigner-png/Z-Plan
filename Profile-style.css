@@ -104,7 +104,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); /* subtle edge highlight sells the "
     border-radius: 1rem;
     padding-top: 1%;
     gap: clamp(2.5rem,calc(6rem - 6vw),5.3rem);
-    background-image: url(photos/spaceBackground2.png);
+    background-image: url(photos/spaceBackground2.webp);
     background-size: cover;
     background-position: center;
 
@@ -1099,7 +1099,7 @@ background-position: center;
 .AddedNotesSticker{
     width:30%;
      height: 100%;
-     background-image: url(photos/AddedNotes-Sticker.jpg);
+     background-image: url(photos/AddedNotes-Sticker.png);
      background-size: cover;
 background-position: center;
     image-rendering: auto;
